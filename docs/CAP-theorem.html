@@ -1,0 +1,43 @@
+<h1>CAP Theorem</h1>
+
+<ul>
+<li><a href="#cap-theorem">CAP Theorem</a></li>
+<li><a href="#1-what-is-cap-theorem">1. What is CAP Theorem?</a></li>
+<li><a href="#2-implications-of-cap-theorem">2. Implications of CAP Theorem</a></li>
+<li><a href="#3-examples-of-cap-theorem-in-action">3. Examples of CAP Theorem in Action</a></li>
+<li><a href="#4-conclusion">4. Conclusion</a></li>
+</ul>
+
+<h1>1. What is CAP Theorem?</h1>
+
+<p>The CAP theorem, also known as Brewer's theorem, is a theorem in computer science that states that it is impossible for a distributed computer system to simultaneously provide the following guarantees:</p>
+
+<ul>
+<li><strong>Consistency:</strong> Every read operation returns the most recent write operation that was performed on a given data item.</li>
+<li><strong>Availability:</strong> Every request received by the system must be eventually responded to, even if it means returning an error.</li>
+<li><strong>Partition tolerance:</strong> The system continues to operate even if some of the nodes fail.</li>
+</ul>
+
+<h1>2. Implications of CAP Theorem</h1>
+
+<p>The CAP theorem has a number of implications for the design of distributed computer systems.</p>
+
+<ul>
+<li><strong>No single system can provide all three guarantees.</strong></li>
+<li><strong>System designers must choose which two guarantees are most important for their system.</strong></li>
+<li><strong>There is no one-size-fits-all solution to the CAP theorem.</strong></li>
+<li><strong>System designers must carefully consider the specific requirements of their system when choosing which guarantees to implement.</strong></li>
+</ul>
+
+<h1>3. Examples of CAP Theorem in Action</h1>
+
+<p>The CAP theorem can be seen in action in a number of different distributed systems.</p>
+
+<ul>
+<li><strong>In a distributed database, the system must choose between consistency and availability.</strong> If the system prioritizes consistency, then it may not be able to respond to requests from clients that are connected to nodes that have failed. If the system prioritizes availability, then it may not be able to guarantee that all reads will return the most recent write.</li>
+<li><strong>In a distributed file system, the system must choose between consistency and partition tolerance.</strong> If the system prioritizes consistency, then it may not be able to continue operating if some of the nodes fail. If the system prioritizes partition tolerance, then it may not be able to guarantee that all reads will return the most recent write.</li>
+</ul>
+
+<h1>4. Conclusion</h1>
+
+<p>The CAP theorem is an important concept for anyone who designs or builds distributed computer systems. By understanding the CAP theorem, system designers can make informed decisions about the guarantees that their systems must provide.</p>

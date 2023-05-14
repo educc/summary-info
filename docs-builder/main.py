@@ -27,12 +27,14 @@ def get_doc_folder() -> Path:
 
 def create_index_file(folder: Path):
     """ It creates an index file with the list of all the files in the folder."""
-    filename_list = list(folder.glob("*.html"))
-    filename_list.sort()
+    filename_list = [(it, it.name.lower()) for it in folder.glob("*.html")]
+    # filename_list.sort(lambda x: x[1])
+    list_sorted = sorted(filename_list, key=lambda x: x[1])
 
     content = ""
-    for file in filename_list:
-        content += f"<li><a href='{file.name}'>{file.stem}</a></li>\n"
+    for file, _ in list_sorted:
+        new_name = file.stem.replace("_", " ").replace("-", " ")
+        content += f"<li><a href='{file.name}'>{new_name}</a></li>\n"
       
     html = TEMPLATE_FILE.read_text().format(content=content)
 
