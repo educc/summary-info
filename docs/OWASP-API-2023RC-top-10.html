@@ -1,0 +1,272 @@
+<h1>OWASP API TOP 10 2013</h1>
+
+<ul>
+<li><a href="#owasp-api-top-10-2013">OWASP API TOP 10 2013</a></li>
+<li><a href="#1-broken-object-level-authorization-bola">1. Broken Object Level Authorization (BOLA)</a></li>
+<li><a href="#2-broken-authentication">2. Broken Authentication</a></li>
+<li><a href="#3-broken-object-property-level-authorization">3. Broken Object Property Level Authorization</a></li>
+<li><a href="#4-unrestricted-resource-consumption">4. Unrestricted Resource Consumption</a></li>
+<li><a href="#5-broken-function-level-authorization">5. Broken Function Level Authorization</a></li>
+<li><a href="#6-server-side-request-forgery-ssrf">6. Server-Side Request Forgery (SSRF)</a></li>
+<li><a href="#7-security-misconfiguration">7. Security Misconfiguration</a></li>
+<li><a href="#8-lack-of-protection-from-automated-threats">8. Lack of Protection from Automated Threats</a></li>
+<li><a href="#9-improper-asset-management">9. Improper Asset Management</a></li>
+<li><a href="#10-unsafe-consumption-of-apis">10. Unsafe Consumption of APIs</a></li>
+</ul>
+
+<h1>1. Broken Object Level Authorization (BOLA)</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>BOLA is a vulnerability that allows attackers to access resources that they are not authorized to access. This can be exploited to steal data, modify data, or perform other unauthorized actions.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use a SQL injection attack to gain access to sensitive data that is stored in a database.</li>
+<li>An attacker could use a brute-force attack to guess a user's password.</li>
+<li>An attacker could exploit a misconfigured firewall to gain access to an API.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use strong authentication mechanisms, such as OAuth 2.0 or OpenID Connect.</li>
+<li>Implement role-based access control (RBAC).</li>
+<li>Use input validation to prevent SQL injection and other attacks.</li>
+<li>Monitor your APIs for suspicious activity.</li>
+</ul></li>
+</ul>
+
+<h1>2. Broken Authentication</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Broken authentication is a vulnerability that allows attackers to gain unauthorized access to APIs. This can be exploited to steal data, modify data, or perform other unauthorized actions.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use a brute-force attack to guess a user's password.</li>
+<li>An attacker could exploit a misconfigured password reset mechanism.</li>
+<li>An attacker could exploit a session fixation attack.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use strong passwords and password policies.</li>
+<li>Implement two-factor authentication (2FA).</li>
+<li>Use a secure password reset mechanism.</li>
+<li>Use a session management framework.</li>
+</ul></li>
+</ul>
+
+<h1>3. Broken Object Property Level Authorization</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Broken object property level authorization is a vulnerability that allows attackers to access sensitive properties of objects that they are not authorized to access. This can be exploited to steal data, modify data, or perform other unauthorized actions.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use a SQL injection attack to gain access to sensitive data that is stored in a database.</li>
+<li>An attacker could use a brute-force attack to guess a user's password.</li>
+<li>An attacker could exploit a misconfigured firewall to gain access to an API.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use strong authentication mechanisms, such as OAuth 2.0 or OpenID Connect.</li>
+<li>Implement role-based access control (RBAC).</li>
+<li>Use input validation to prevent SQL injection and other attacks.</li>
+<li>Monitor your APIs for suspicious activity.</li>
+</ul></li>
+</ul>
+
+<h1>4. Unrestricted Resource Consumption</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Unrestricted resource consumption is a vulnerability that allows attackers to consume an excessive amount of resources, such as CPU time, memory, or bandwidth. This can be exploited to deny service to legitimate users.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use a denial-of-service (DoS) attack to overwhelm an API with requests.</li>
+<li>An attacker could use a distributed denial-of-service (DDoS) attack to overwhelm an API with requests from multiple sources.</li>
+<li>An attacker could use a resource exhaustion attack to consume all of the resources of an API, such as CPU time or memory.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Implement rate limiting to prevent attackers from consuming too many resources.</li>
+<li>Use a load balancer to distribute traffic across multiple servers.</li>
+<li>Monitor your APIs for suspicious activity.</li>
+</ul></li>
+</ul>
+
+<h1>5. Broken Function Level Authorization</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Broken function level authorization is a vulnerability that allows attackers to call functions that they are not authorized to call. This can be exploited to steal data, modify data, or perform other unauthorized actions.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use a SQL injection attack to gain access to sensitive data that is stored in a database.</li>
+<li>An attacker could use a brute-force attack to guess a user's password.</li>
+<li>An attacker could exploit a misconfigured firewall to gain access to an API.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use strong authentication mechanisms, such as OAuth 2.0 or OpenID Connect.</li>
+<li>Implement role-based access control (RBAC).</li>
+<li>Use input validation to prevent SQL injection and other attacks.</li>
+<li>Monitor your APIs for suspicious activity.</li>
+</ul></li>
+</ul>
+
+<h1>6. Server-Side Request Forgery (SSRF)</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>SSRF is a vulnerability that allows attackers to make requests to arbitrary URLs on the server that hosts the API. This can be exploited to steal data, modify data, or perform other unauthorized actions.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use SSRF to make requests to internal systems that are not exposed to the public.</li>
+<li>An attacker could use SSRF to make requests to systems that are not intended to be accessed by the public, such as systems that contain sensitive data.</li>
+<li>An attacker could use SSRF to perform actions on behalf of a user, such as making a purchase or transferring money.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Validate all input before making requests to external systems.</li>
+<li>Use a white list of allowed domains for requests.</li>
+<li>Use a proxy server to make requests to external systems.</li>
+</ul></li>
+</ul>
+
+<h1>7. Security Misconfiguration</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Security misconfiguration is a vulnerability that is caused by incorrect or incomplete security settings. This can be exploited by attackers to gain unauthorized access to systems or data.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could exploit a misconfigured firewall to gain access to a system.</li>
+<li>An attacker could exploit a misconfigured web server to gain access to sensitive data.</li>
+<li>An attacker could exploit a misconfigured database to gain access to sensitive data.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use a security configuration management tool to manage security settings.</li>
+<li>Use a security scanner to identify misconfigured security settings.</li>
+<li>Follow security best practices.</li>
+</ul></li>
+</ul>
+
+<h1>8. Lack of Protection from Automated Threats</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Lack of protection from automated threats is a vulnerability that is caused by not taking steps to protect systems from automated attacks. This can be exploited by attackers to launch large-scale attacks that can overwhelm systems and cause denial-of-service.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use a denial-of-service (DoS) attack to overwhelm a system with requests.</li>
+<li>An attacker could use a distributed denial-of-service (DDoS) attack to overwhelm a system with requests from multiple sources.</li>
+<li>An attacker could use a brute-force attack to guess passwords or other sensitive data.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use a firewall to block unwanted traffic.</li>
+<li>Use a load balancer to distribute traffic across multiple servers.</li>
+<li>Use a web application firewall (WAF) to block malicious traffic.</li>
+<li>Implement rate limiting to prevent attackers from making too many requests.</li>
+</ul></li>
+</ul>
+
+<h1>9. Improper Asset Management</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Improper asset management is a vulnerability that is caused by not properly managing sensitive assets, such as passwords, keys, and certificates. This can be exploited by attackers to gain unauthorized access to systems or data.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could steal a password or key and use it to gain unauthorized access to a system.</li>
+<li>An attacker could steal a certificate and use it to impersonate a legitimate user.</li>
+<li>An attacker could exploit a vulnerability in an asset management system to gain unauthorized access to assets.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use strong passwords and keys.</li>
+<li>Store passwords and keys in a secure location.</li>
+<li>Use a certificate authority (CA) to issue and revoke certificates.</li>
+<li>Implement asset management policies and procedures.</li>
+</ul></li>
+</ul>
+
+<h1>10. Unsafe Consumption of APIs</h1>
+
+<ul>
+<li><strong>What is this?</strong></li>
+</ul>
+
+<p>Unsafe consumption of APIs is a vulnerability that is caused by not using APIs safely. This can be exploited by attackers to gain unauthorized access to systems or data.</p>
+
+<ul>
+<li><p><strong>Attack Scenarios</strong></p>
+
+<ul>
+<li>An attacker could use an API to make unauthorized requests to a system.</li>
+<li>An attacker could use an API to inject malicious code into a system.</li>
+<li>An attacker could use an API to exploit a vulnerability in a system.</li>
+</ul></li>
+<li><p><strong>How to Prevent</strong></p>
+
+<ul>
+<li>Use APIs only for authorized purposes.</li>
+<li>Validate all input before making requests to APIs.</li>
+<li>Use a proxy server to make requests to APIs.</li>
+<li>Implement API security policies and procedures.</li>
+</ul></li>
+</ul>
