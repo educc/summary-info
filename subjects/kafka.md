@@ -1,4 +1,6 @@
-Apache Kafka
+# Apache Kafka
+
+- [Apache Kafka](#apache-kafka)
 - [1. Writing messages to Kafka](#1-writing-messages-to-kafka)
   - [1.1. Producers](#11-producers)
   - [1.2. Topics](#12-topics)
@@ -35,12 +37,15 @@ Apache Kafka
 ## 1.1. Producers
 - Write messages to Kafka topics.
 - Can be configured to use a variety of serialization formats.
+
 ## 1.2. Topics
 - A logical grouping of messages.
 - Can be partitioned to improve scalability.
+
 ## 1.3. Partitions
 - A physical division of a topic.
 - Messages are distributed across partitions based on a hash of their key.
+
 ## 1.4. Replication
 - Each partition is replicated to a number of brokers.
 - This ensures that messages are not lost if a broker fails.
@@ -50,12 +55,15 @@ Apache Kafka
 ## 2.1. Consumers
 - Read messages from Kafka topics.
 - Can be configured to use a variety of consumer groups.
+
 ## 2.2. Consumer groups
 - A group of consumers that read from the same topic.
 - Messages are distributed across consumers in the group.
+
 ## 2.3. Offsets
 - The position in a partition where a consumer is reading from.
 - Offsets are maintained by Kafka and are used to resume reading from where a consumer left off.
+
 ## 2.4. Heartbeat
 - A periodic message that consumers send to Kafka to indicate that they are still alive.
 - If a consumer fails to send a heartbeat, Kafka will mark it as dead and stop sending it messages.
@@ -65,11 +73,14 @@ Apache Kafka
 ## 3.1. Broker
 - A server that runs Kafka.
 - Brokers are responsible for storing messages, replicating them to other brokers, and serving them to consumers.
+
 ## 3.2. Zookeeper
 - A distributed coordination service that Kafka uses to store metadata about its topics, brokers, and consumers.
+
 ## 3.3. Log
 - A circular log that stores messages.
 - Messages are appended to the log in a append-only fashion.
+
 ## 3.4. Replication
 - Each partition is replicated to a number of brokers.
 - This ensures that messages are not lost if a broker fails.
@@ -79,9 +90,11 @@ Apache Kafka
 ## 4.1. Exactly-once semantics
 - Guarantees that messages are delivered exactly once.
 - This is the most reliable delivery semantics, but it can be the most expensive.
+
 ## 4.2. At-least-once semantics
 - Guarantees that messages are delivered at least once.
 - This is a less expensive delivery semantics than exactly-once, but it can result in duplicate messages.
+
 ## 4.3. At-most-once semantics
 - Guarantees that messages are delivered at most once.
 - This is the least expensive delivery semantics, but it can result in lost messages.
@@ -90,6 +103,7 @@ Apache Kafka
 
 ## 5.1. Kafka Connect
 - A framework for building and managing data pipelines that connect Kafka to other data sources and sinks.
+
 ## 5.2. Kafka Streams
 - A library for building real-time streaming applications that process data from Kafka.
 
@@ -97,8 +111,10 @@ Apache Kafka
 
 ## 6.1. JMX
 - A Java Management Extensions (JMX) console that can be used to monitor Kafka brokers.
+
 ## 6.2. Prometheus
 - An open-source monitoring system that can be used to collect metrics from Kafka brokers.
+
 ## 6.3. Grafana
 - A visualization tool that can be used to display metrics collected by Prometheus.
 
@@ -106,7 +122,9 @@ Apache Kafka
 
 ## 7.1. Apache Spark
 - A distributed processing framework that can be used to process streaming data from Kafka.
+
 ## 7.2. Apache Flink
 - A distributed processing framework that can be used to process streaming data from Kafka.
+
 ## 7.3. Amazon Kinesis
 - A fully-managed service that can be used to process streaming data from Kafka.
