@@ -1,0 +1,553 @@
+<h1>Pattern of enterprise application architectures</h1>
+
+<ul>
+<li><a href="#pattern-of-enterprise-application-architectures">Pattern of enterprise application architectures</a></li>
+<li><a href="#1-concurrency">1. Concurrency</a>
+<ul>
+<li><a href="#11-concurrency-problems">1.1. Concurrency Problems</a></li>
+<li><a href="#12-execution-context">1.2. Execution Context</a></li>
+<li><a href="#13-optimistic-and-pessimistic-concurrency-control">1.3. Optimistic and Pessimistic Concurrency Control</a></li>
+<li><a href="#14-transactions">1.4. Transactions</a></li>
+</ul></li>
+<li><a href="#2-session-state">2. Session State</a></li>
+<li><a href="#3-domain-logic-patterns">3. Domain Logic Patterns</a>
+<ul>
+<li><a href="#31-transaction-script">3.1. Transaction Script</a></li>
+<li><a href="#32-domain-model">3.2. Domain Model</a></li>
+<li><a href="#33-service-layer">3.3. Service Layer</a></li>
+</ul></li>
+<li><a href="#4-data-source-architectural-patterns">4. Data Source Architectural Patterns</a>
+<ul>
+<li><a href="#41-active-record">4.1. Active Record</a></li>
+<li><a href="#42-data-mapper">4.2. Data Mapper</a></li>
+</ul></li>
+<li><a href="#5-object-relational-behavioral-patterns">5. Object-Relational Behavioral Patterns</a>
+<ul>
+<li><a href="#51-unit-of-work">5.1. Unit of Work</a></li>
+<li><a href="#52-identity-map">5.2. Identity Map</a></li>
+<li><a href="#53-lazy-load">5.3. Lazy Load</a></li>
+</ul></li>
+<li><a href="#6-object-relational-structural-patterns">6. Object-Relational Structural Patterns</a>
+<ul>
+<li><a href="#61-identity-field">6.1. Identity Field</a></li>
+<li><a href="#62-foreign-key-mapping">6.2. Foreign Key Mapping</a></li>
+<li><a href="#63-dependent-mapping">6.3. Dependent Mapping</a></li>
+<li><a href="#64-single-table-inheritance">6.4. Single Table Inheritance</a></li>
+<li><a href="#65-class-table-inheritance">6.5. Class Table Inheritance</a></li>
+<li><a href="#66-concrete-table-inheritance">6.6. Concrete Table Inheritance</a></li>
+<li><a href="#67-inheritance-mappers">6.7. Inheritance Mappers</a></li>
+</ul></li>
+<li><a href="#7-object-relational-metadata-mapping-patterns">7. Object-Relational Metadata Mapping Patterns</a>
+<ul>
+<li><a href="#71-metadata-mapping">7.1. Metadata Mapping</a></li>
+<li><a href="#72-queryobject">7.2. QueryObject</a></li>
+<li><a href="#73-repository">7.3. Repository</a></li>
+</ul></li>
+<li><a href="#8-web-presentation-patterns">8. Web Presentation Patterns</a>
+<ul>
+<li><a href="#81-model-view-controller">8.1. Model View Controller</a></li>
+<li><a href="#82-page-controller">8.2. Page Controller</a></li>
+<li><a href="#83-template-view">8.3. Template View</a></li>
+<li><a href="#84-application-controller">8.4. Application Controller</a></li>
+</ul></li>
+<li><a href="#9-distribution-patterns">9. Distribution Patterns</a>
+<ul>
+<li><a href="#91-remote-facade">9.1. Remote Facade</a></li>
+<li><a href="#92-data-transfer-object">9.2. Data Transfer Object</a></li>
+</ul></li>
+<li><a href="#10-offline-concurrency-patterns">10. Offline Concurrency Patterns</a>
+<ul>
+<li><a href="#101-optimistic-offline-lock">10.1. Optimistic Offline lock</a></li>
+<li><a href="#102-pessimistic-offline-lock">10.2. Pessimistic Offline Lock</a></li>
+<li><a href="#103-implicit-lock">10.3. Implicit Lock</a></li>
+</ul></li>
+<li><a href="#11-session-state-patterns">11. Session State Patterns</a>
+<ul>
+<li><a href="#111-client-session-state">11.1. Client Session State</a></li>
+<li><a href="#112-server-session-state">11.2. Server Session State</a></li>
+<li><a href="#113-database-session-state">11.3. Database Session State</a></li>
+</ul></li>
+<li><a href="#12-base-patterns">12. Base Patterns</a>
+<ul>
+<li><a href="#121-gateway">12.1. Gateway</a></li>
+<li><a href="#122-mapper">12.2. Mapper</a></li>
+<li><a href="#123-registry">12.3. Registry</a></li>
+</ul></li>
+</ul>
+
+<h1>1. Concurrency</h1>
+
+<h2>1.1. Concurrency Problems</h2>
+
+<ul>
+<li>Data corruption</li>
+<li>Deadlocks</li>
+<li>Livelocks</li>
+<li><p>Lost updates</p>
+
+<h2>1.2. Execution Context</h2></li>
+<li><p>Thread</p></li>
+<li>Process</li>
+<li><p>Transaction</p>
+
+<h2>1.3. Optimistic and Pessimistic Concurrency Control</h2></li>
+<li><p>Optimistic concurrency control</p></li>
+<li><p>Pessimistic concurrency control</p>
+
+<h2>1.4. Transactions</h2></li>
+<li><p>ACID</p></li>
+<li>Isolation</li>
+<li>Consistency</li>
+<li>Durability</li>
+</ul>
+
+<h1>2. Session State</h1>
+
+<ul>
+<li>In-memory</li>
+<li>Stateless</li>
+<li>Stateful</li>
+</ul>
+
+<h1>3. Domain Logic Patterns</h1>
+
+<h2>3.1. Transaction Script</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Encapsulates all the logic for a single transaction</li>
+<li>Provides a clear boundary between the UI and the domain logic</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the domain logic is complex and needs to be encapsulated</li>
+</ul></li>
+</ul>
+
+<h2>3.2. Domain Model</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Represents the domain of the application</li>
+<li>Provides a common vocabulary for the application</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to model a real-world domain</li>
+</ul></li>
+</ul>
+
+<h2>3.3. Service Layer</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Provides a layer of abstraction between the UI and the domain logic</li>
+<li>Makes the domain logic more reusable</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the domain logic is complex or needs to be reused</li>
+</ul></li>
+</ul>
+
+<h1>4. Data Source Architectural Patterns</h1>
+
+<h2>4.1. Active Record</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Provides a direct mapping between database tables and objects</li>
+<li>Makes it easy to access data from the database</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to access data from the database directly</li>
+</ul></li>
+</ul>
+
+<h2>4.2. Data Mapper</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Isolates the application from the database</li>
+<li>Makes it easier to change the database</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to be able to change the database</li>
+</ul></li>
+</ul>
+
+<h1>5. Object-Relational Behavioral Patterns</h1>
+
+<h2>5.1. Unit of Work</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Encapsulates all the logic for a single database transaction</li>
+<li>Provides a way to roll back changes if a transaction fails</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to perform multiple database operations as a single unit
+<h2>5.2. Identity Map</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Tracks objects that have been loaded from the database</li>
+<li>Prevents the application from loading the same object multiple times</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to load the same object multiple times
+<h2>5.3. Lazy Load</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Delays the loading of an object until it is actually needed</li>
+<li>Improves performance by only loading objects that are needed</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application only needs to load a subset of objects</li>
+</ul></li>
+</ul>
+
+<h1>6. Object-Relational Structural Patterns</h1>
+
+<h2>6.1. Identity Field</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Provides a unique identifier for each object in the database</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to be able to uniquely identify objects in the database</li>
+</ul></li>
+</ul>
+
+<h2>6.2. Foreign Key Mapping</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Creates a relationship between two tables in the database</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to relate two objects in the database</li>
+</ul></li>
+</ul>
+
+<h2>6.3. Dependent Mapping</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Creates a relationship between a parent object and a child object in the database</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to relate a parent object to a child object in the database</li>
+</ul></li>
+</ul>
+
+<h2>6.4. Single Table Inheritance</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Stores all the data for a hierarchy of objects in a single table</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to store a hierarchy of objects in the database</li>
+</ul></li>
+</ul>
+
+<h2>6.5. Class Table Inheritance</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Stores each class in a separate table in the database</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to store a hierarchy of objects in the database and needs to be able to access each class separately</li>
+</ul></li>
+</ul>
+
+<h2>6.6. Concrete Table Inheritance</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Stores each class in a separate table in the database and stores a discriminator column to indicate which class each row belongs to</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to store a hierarchy of objects in the database and needs to be able to access each class separately</li>
+</ul></li>
+</ul>
+
+<h2>6.7. Inheritance Mappers</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Automatically maps objects to tables in the database based on their inheritance hierarchy</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to store a hierarchy of objects in the database and needs to be able to access each class separately</li>
+</ul></li>
+</ul>
+
+<h1>7. Object-Relational Metadata Mapping Patterns</h1>
+
+<h2>7.1. Metadata Mapping</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Maps database metadata to object-oriented metadata</li>
+<li>Provides a way to access database data from objects</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to access database data from objects
+<h2>7.2. QueryObject</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Encapsulates database queries</li>
+<li>Provides a way to execute queries without having to know the database schema</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to execute database queries without having to know the database schema
+<h2>7.3. Repository</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Provides a layer of abstraction between the application and the database</li>
+<li>Makes it easier to change the database without affecting the application</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to be able to change the database without affecting the application</li>
+</ul></li>
+</ul>
+
+<h1>8. Web Presentation Patterns</h1>
+
+<h2>8.1. Model View Controller</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Separates the presentation of data from the logic of the application</li>
+<li>Makes it easier to change the presentation of data without affecting the logic of the application</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to be able to change the presentation of data without affecting the logic of the application
+<h2>8.2. Page Controller</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Controls the flow of a web page</li>
+<li>Makes it easier to create complex web pages</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to create complex web pages
+<h2>8.3. Template View</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Provides a way to define the layout of a web page</li>
+<li>Makes it easier to create consistent web pages</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to create consistent web pages
+<h2>8.4. Application Controller</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Controls the flow of an application</li>
+<li>Makes it easier to create complex applications</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to create complex applications</li>
+</ul></li>
+</ul>
+
+<h1>9. Distribution Patterns</h1>
+
+<h2>9.1. Remote Facade</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Provides a way to access remote objects</li>
+<li>Makes it easier to create distributed applications</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to access remote objects
+<h2>9.2. Data Transfer Object</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Encapsulates data that is transferred between objects</li>
+<li>Makes it easier to transfer data between objects</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to transfer data between objects</li>
+</ul></li>
+</ul>
+
+<h1>10. Offline Concurrency Patterns</h1>
+
+<h2>10.1. Optimistic Offline lock</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Assumes that concurrent users will not modify the same data</li>
+<li>Only locks data when it is actually modified</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to be able to handle concurrent users
+<h2>10.2. Pessimistic Offline Lock</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Locks data as soon as it is accessed</li>
+<li>Prevents concurrent users from modifying the same data</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to prevent concurrent users from modifying the same data
+<h2>10.3. Implicit Lock</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Uses a database lock to prevent concurrent users from modifying the same data</li>
+<li>The lock is released when the user finishes using the data</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to prevent concurrent users from modifying the same data</li>
+</ul></li>
+</ul>
+
+<h1>11. Session State Patterns</h1>
+
+<h2>11.1. Client Session State</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Stores session state on the client</li>
+<li>Makes it easier to create stateless servers</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to create stateless servers
+<h2>11.2. Server Session State</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Stores session state on the server</li>
+<li>Makes it easier to create stateful servers</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to create stateful servers
+<h2>11.3. Database Session State</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Stores session state in the database</li>
+<li>Makes it easier to create scalable servers</li>
+</ul></li>
+<li>When to use it
+<ul>
+<li>When the application needs to create scalable servers</li>
+</ul></li>
+</ul>
+
+<h1>12. Base Patterns</h1>
+
+<h2>12.1. Gateway</h2>
+
+<ul>
+<li>How it works
+<ul>
+<li>Provides a way to access a remote service</li>
+<li>Makes it easier to create distributed applications</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to access a remote service
+<h2>12.2. Mapper</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Maps data between different formats</li>
+<li>Makes it easier to integrate different systems</li>
+</ul></li>
+<li><p>When to use it</p>
+
+<ul>
+<li>When the application needs to integrate different systems
+<h2>12.3. Registry</h2></li>
+</ul></li>
+<li><p>How it works</p>
+
+<ul>
+<li>Stores a list of objects</li>
+<li>Makes it easier to find objects</li>
+</ul></li>
+</ul>
