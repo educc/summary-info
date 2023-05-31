@@ -1,93 +1,178 @@
-<h1>Angular Framework</h1>
+<p># Angular Framework</p>
 
 <ul>
 <li><a href="#angular-framework">Angular Framework</a></li>
-<li><a href="#1-structure-of-an-angular-application">1. Structure of an Angular Application</a></li>
-<li><a href="#2-angular-lifecycle">2. Angular Lifecycle</a></li>
-<li><a href="#3-angular-modules">3. Angular Modules</a></li>
-<li><a href="#4-angular-components">4. Angular Components</a></li>
-<li><a href="#5-pipes-and-directives">5. Pipes and Directives</a></li>
-<li><a href="#6-dependency-injection">6. Dependency Injection</a></li>
-<li><a href="#7-reactive-using-observable-and-rxjs">7. Reactive using Observable and RxJS</a></li>
-<li><a href="#8-routing">8. Routing</a></li>
-<li><a href="#9-security">9. Security</a></li>
-<li><a href="#10-common-angular-services">10. Common Angular Services</a></li>
+<li><a href="#1-modules">1. Modules</a></li>
+<li><a href="#2-components">2. Components</a>
+<ul>
+<li><a href="#21-component-lifecycle">2.1. Component Lifecycle</a></li>
+</ul></li>
+<li><a href="#3-sharing-data-between-child-and-parent-components">3. Sharing data between child and parent components</a></li>
+<li><a href="#4-templates">4. Templates</a></li>
+<li><a href="#5-directives">5. Directives</a></li>
+<li><a href="#6-pipes">6. Pipes</a></li>
+<li><a href="#7-optimization">7. Optimization</a></li>
+<li><a href="#8-dependency-injection">8. Dependency Injection</a></li>
+<li><a href="#9-reactive-using-observable-and-rxjs">9. Reactive using Observable and RxJS</a></li>
+<li><a href="#10-routing">10. Routing</a></li>
+<li><a href="#11-security">11. Security</a></li>
 </ul>
 
-<h1>1. Structure of an Angular Application</h1>
+<h1>1. Modules</h1>
 
 <ul>
-<li>An Angular application is a collection of components.</li>
-<li>Components are the building blocks of Angular applications.</li>
-<li>Components can be nested to create complex UIs.</li>
-</ul>
-
-<h1>2. Angular Lifecycle</h1>
-
+<li>A module is a collection of components, directives, pipes, and services that are used to build an Angular application. Modules are used to organize code and make it easier to manage.</li>
+<li>It can import other modules.</li>
+<li><strong>Common modules</strong> include:
 <ul>
-<li>An Angular component has a lifecycle that is triggered by events such as creation, destruction, and change detection.</li>
-<li>The lifecycle allows developers to control how a component behaves at different stages of its life.</li>
-</ul>
-
-<h1>3. Angular Modules</h1>
-
+<li><code>BrowserModule</code>: Provides the basic functionality for Angular applications, such as the ability to create and manage components.</li>
+<li><code>FormsModule</code>: Provides the ability to create and manage forms in Angular applications.</li>
+<li><code>HttpModule</code>: Provides the ability to make HTTP requests in Angular applications.</li>
+</ul></li>
+<li><strong>Lazy loading</strong>:
 <ul>
-<li>An Angular module is a collection of related components, directives, pipes, and services.</li>
-<li>Modules are used to organize code and make it easier to manage.</li>
-</ul>
-
-<h1>4. Angular Components</h1>
-
-<ul>
-<li>An Angular component is a TypeScript class that defines the behavior and appearance of a UI element.</li>
-<li>Components can be used to create reusable UI elements.</li>
-</ul>
-
-<h1>5. Pipes and Directives</h1>
-
-<ul>
-<li>Angular pipes are used to transform data.</li>
-<li>Angular directives are used to add new functionality to elements.</li>
-</ul>
-
-<h1>6. Dependency Injection</h1>
-
-<ul>
-<li>Angular dependency injection is a technique for injecting dependencies into components.</li>
-<li>Dependency injection makes it easier to test components and makes code more modular.</li>
-</ul>
-
-<h1>7. Reactive using Observable and RxJS</h1>
-
-<ul>
-<li>Angular reactive programming is a technique for handling asynchronous data.</li>
-<li>Reactive programming makes it easier to handle large amounts of data and makes code more responsive.</li>
-</ul>
-
-<h1>8. Routing</h1>
-
-<ul>
-<li>Angular routing is a technique for navigating between different pages in an Angular application.</li>
-<li>Routing makes it easier to create single-page applications.</li>
-</ul>
-
-<h1>9. Security</h1>
-
-<ul>
-<li>Angular security is a set of features that help to protect Angular applications from security vulnerabilities.</li>
-<li>Angular security features include:
-<ul>
-<li>Cross-site request forgery (CSRF) protection</li>
-<li>Content security policy (CSP) support</li>
-<li>Https only mode</li>
+<li>Improves perfomance.</li>
+<li>Divides the public and private part of the application. This improves security.</li>
 </ul></li>
 </ul>
 
-<h1>10. Common Angular Services</h1>
+<h1>2. Components</h1>
 
 <ul>
-<li>The HTTP service for making HTTP requests</li>
-<li>The Location service for getting and setting the browser's location</li>
-<li>The Cookie service for managing cookies</li>
-<li>The Storage service for storing data in the browser's local storage</li>
+<li>A component is a reusable piece of code that can be used to create HTML elements. Components can be nested to create complex UIs.</li>
+</ul>
+
+<h2>2.1. Component Lifecycle</h2>
+
+<ul>
+<li>An Angular component has a lifecycle that is triggered by events such as creation, destruction, and change detection.</li>
+<li>The lifecycle allows developers to control how a component behaves at different stages of its life. 
+<ul>
+<li><code>ngOnChanges</code>: Called when the component's input properties change.</li>
+<li><code>ngOnInit</code>: 
+<ul>
+<li>Called when the component is initialized.</li>
+<li>Usually to suscribe or pull data from external services.</li>
+</ul></li>
+<li><code>ngAfterViewInit</code>: Called after the component's view has been initialized.</li>
+<li><code>ngOnDestroy</code>: 
+<ul>
+<li>Called when the component is destroyed.</li>
+<li>Usually to unsuscribe observables. This avoids memory leaks.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>3. Sharing data between child and parent components</h1>
+
+<ul>
+<li>There are a number of ways to share data between child and parent components:
+<ul>
+<li><strong>Input decorator:</strong> The <code>@Input()</code> decorator can be used to inject data into a component from its parent.</li>
+<li><strong>Output decorator:</strong> The <code>@Output()</code> decorator can be used to emit data from a component to its parent.</li>
+<li><strong>Service class:</strong> A service class can be used to share data between components.</li>
+<li><strong>Service with observable:</strong> An observable can be used to share data between components in a reactive way.</li>
+</ul></li>
+</ul>
+
+<h1>4. Templates</h1>
+
+<ul>
+<li>A template is a HTML file that is used to define the layout and behavior of an Angular component.</li>
+<li>Templates can be used to create dynamic HTML elements, bind data to HTML elements, and execute JavaScript code.</li>
+</ul>
+
+<h1>5. Directives</h1>
+
+<ul>
+<li>A directive is a custom HTML attribute that can be used to add functionality to HTML elements.</li>
+<li>Directives can be used to change the appearance of an HTML element, bind data to an HTML element, or execute JavaScript code.</li>
+<li>Every angular component creates a new structural directive.  </li>
+<li><strong>Structural directives</strong>
+<ul>
+<li>NgIf
+<ul>
+<li>Conditionally renders an element</li>
+</ul></li>
+<li>NgForOf
+<ul>
+<li>Repeats an element for each item in an array</li>
+</ul></li>
+<li>NgSwitch
+<ul>
+<li>Switches between different templates based on a value</li>
+</ul></li>
+<li>NgContent
+<ul>
+<li>Injects content from a parent component into a child component</li>
+</ul></li>
+</ul></li>
+<li><strong>Attribute directives</strong>
+<ul>
+<li>NgClass
+<ul>
+<li>Dynamically adds or removes CSS classes to an element</li>
+</ul></li>
+<li>NgStyle
+<ul>
+<li>Dynamically sets the style properties of an element</li>
+</ul></li>
+<li>NgModel
+<ul>
+<li>Binds an input element to a property in a component</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>6. Pipes</h1>
+
+<ul>
+<li>A pipe is a function that can be used to transform data.</li>
+<li>Pipes can be used to format data, convert data types, and filter data.</li>
+<li><p>Angular includes:</p>
+
+<ul>
+<li><strong>DatePipe:</strong> The DatePipe can be used to format dates.</li>
+<li><strong>UpperCasePipe:</strong> The UpperCasePipe can be used to convert text to uppercase.</li>
+<li><strong>LowerCasePipe:</strong> The LowerCasePipe can be used to convert text to lowercase.</li>
+<li><strong>CurrencyPipe:</strong> The CurrencyPipe can be used to format numbers as currency.</li>
+<li><strong>DecimalPipe:</strong> The DecimalPipe can be used to format numbers with a specific number of decimal places.</li>
+<li><strong>PercentPipe:</strong> The PercentPipe can be used to format numbers as percentages.</li>
+</ul></li>
+</ul>
+
+<h1>7. Optimization</h1>
+
+<ul>
+<li>Loads the necessary, all the others parts lazy.</li>
+<li>Minimize bundles.</li>
+<li>Clean de the code.</li>
+<li>Reduce images size.</li>
+<li>Use components small in size.</li>
+<li>Good practice when using observables.</li>
+<li>Use <code>strict</code> and <code>production</code> mode.</li>
+</ul>
+
+<h1>8. Dependency Injection</h1>
+
+<ul>
+<li>Pending</li>
+</ul>
+
+<h1>9. Reactive using Observable and RxJS</h1>
+
+<ul>
+<li>Pending</li>
+</ul>
+
+<h1>10. Routing</h1>
+
+<ul>
+<li>Pending</li>
+</ul>
+
+<h1>11. Security</h1>
+
+<ul>
+<li>Pending </li>
 </ul>
