@@ -1,0 +1,159 @@
+<h1>Object-Oriented Programming (OOP)</h1>
+
+<h2>1. Definition</h2>
+
+<p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data in the form of fields (attributes) and code in the form of methods (functions). OOP is centered around the idea of structuring programs so that data and operations are encapsulated within these objects, promoting code organization and reuse.</p>
+
+<h2>2. Core Principles (Pillars)</h2>
+
+<p>The four core principles of OOP form the foundation for creating flexible, reusable, and maintainable software designs:</p>
+
+<ul>
+<li><p><strong>Encapsulation</strong>:</p>
+
+<ul>
+<li><strong>Definition</strong>: Encapsulation is the mechanism of restricting direct access to some of an object's components, which means that the object's internal state can only be modified through a controlled interface (usually via methods). This hides the implementation details and protects the integrity of the object's state.</li>
+<li><strong>Example</strong>: Using <code>private</code> fields and providing <code>public</code> getter and setter methods to access and modify the data.</li>
+</ul></li>
+<li><p><strong>Abstraction</strong>: </p>
+
+<ul>
+<li><strong>Definition</strong>: Abstraction is the process of hiding the complex implementation details and exposing only the essential features of an object. It allows you to focus on what an object does rather than how it does it.</li>
+<li><strong>Example</strong>: Defining abstract methods in abstract classes or interfaces, allowing subclasses to provide specific implementations.</li>
+</ul></li>
+<li><p><strong>Inheritance</strong>: </p>
+
+<ul>
+<li><strong>Definition</strong>: Inheritance allows a class (child or subclass) to inherit properties and behavior (fields and methods) from another class (parent or superclass). This promotes code reuse and establishes a relationship between classes.</li>
+<li><strong>Example</strong>: A <code>Dog</code> class can inherit from a <code>Animal</code> class and share its characteristics.</li>
+</ul></li>
+<li><p><strong>Polymorphism</strong>: </p>
+
+<ul>
+<li><strong>Definition</strong>: Polymorphism allows objects to be treated as instances of their parent class. It enables one interface to be used for a general class of actions, allowing behavior to vary depending on the actual object (dynamic method dispatch).</li>
+<li><strong>Example</strong>: A method like <code>draw()</code> might work differently for a <code>Circle</code>, <code>Rectangle</code>, or <code>Triangle</code> but is called in the same way.</li>
+</ul></li>
+</ul>
+
+<h2>3. Benefits of OOP</h2>
+
+<ul>
+<li><p><strong>Code Reusability</strong>: </p>
+
+<ul>
+<li>OOP encourages the reuse of existing classes and objects, reducing redundancy and duplication of code. For example, through inheritance, a subclass can reuse methods and attributes from a parent class.</li>
+</ul></li>
+<li><p><strong>Scalability</strong>: </p>
+
+<ul>
+<li>OOP designs are easier to extend and scale by adding new classes, methods, or properties without modifying existing code. This is essential when developing large-scale applications.</li>
+</ul></li>
+<li><p><strong>Maintainability</strong>: </p>
+
+<ul>
+<li>With encapsulation, changes in one part of the application (like an object's internal workings) don’t affect the rest of the system, making it easier to manage and maintain over time.</li>
+</ul></li>
+<li><p><strong>Ease of Debugging</strong>: </p>
+
+<ul>
+<li>Since objects represent real-world entities, it’s easier to conceptualize and debug software systems. Well-encapsulated objects with clearly defined behavior lead to better modularity and isolation of errors.</li>
+</ul></li>
+</ul>
+
+<h2>4. Classes and Objects</h2>
+
+<ul>
+<li><p><strong>Class Definition</strong>: </p>
+
+<ul>
+<li>A class is a blueprint for creating objects. It defines the attributes (fields) and behaviors (methods) that the objects instantiated from the class will have. For example, a <code>Car</code> class might have fields like <code>color</code>, <code>make</code>, <code>model</code>, and methods like <code>startEngine()</code>, <code>drive()</code>.</li>
+</ul></li>
+<li><p><strong>Object Creation</strong>: </p>
+
+<ul>
+<li>Objects are instances of a class and are created using the <code>new</code> keyword in Java. For example, <code>Car myCar = new Car();</code> creates an instance of the <code>Car</code> class.</li>
+</ul></li>
+<li><p><strong>State and Behavior</strong>: </p>
+
+<ul>
+<li>The state of an object is represented by its fields (e.g., the <code>color</code> of a <code>Car</code>), and its behavior is represented by its methods (e.g., <code>drive()</code>).</li>
+</ul></li>
+<li><p><strong>Constructors</strong>: </p>
+
+<ul>
+<li>Constructors are special methods used to initialize objects. There are two types:
+<ul>
+<li><strong>Default Constructor</strong>: A constructor with no parameters.</li>
+<li><strong>Parameterized Constructor</strong>: A constructor with parameters to initialize object attributes when the object is created.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2>5. Common Interview Questions</h2>
+
+<ol>
+<li><p><strong>What are the differences between an abstract class and an interface?</strong></p>
+
+<ul>
+<li>Abstract classes can have both concrete methods and abstract methods (methods without a body), while interfaces only declare method signatures by default (before Java 8) and require classes to implement those methods. After Java 8, interfaces can have default and static methods.</li>
+<li>A class can inherit only one abstract class, but it can implement multiple interfaces.</li>
+</ul></li>
+<li><p><strong>What is method overloading and method overriding?</strong></p>
+
+<ul>
+<li><strong>Method Overloading</strong>: Involves having multiple methods in the same class with the same name but different parameter lists (compile-time polymorphism).</li>
+<li><strong>Method Overriding</strong>: A subclass provides a specific implementation of a method that is already defined in its superclass (runtime polymorphism).</li>
+</ul></li>
+<li><p><strong>Explain the <code>final</code> keyword in Java.</strong></p>
+
+<ul>
+<li>The <code>final</code> keyword can be used with variables, methods, and classes:
+<ul>
+<li><strong>final variable</strong>: A variable's value cannot be changed once initialized.</li>
+<li><strong>final method</strong>: A method cannot be overridden by subclasses.</li>
+<li><strong>final class</strong>: A class cannot be subclassed.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>What is the difference between shallow copy and deep copy?</strong></p>
+
+<ul>
+<li><strong>Shallow Copy</strong>: A copy of the object is made, but the references to objects inside it are not copied. The original and the copied object share the same inner objects.</li>
+<li><strong>Deep Copy</strong>: Not only the object is copied, but also all objects it references, creating independent copies.</li>
+</ul></li>
+<li><p><strong>What is the use of the <code>super</code> keyword in Java?</strong></p>
+
+<ul>
+<li>The <code>super</code> keyword is used to refer to the parent class's members (variables, methods, constructors). It is often used to call the superclass's constructor or to access methods/fields of the parent class that are hidden by the subclass.</li>
+</ul></li>
+<li><p><strong>What is the difference between composition and inheritance?</strong></p>
+
+<ul>
+<li><strong>Inheritance</strong>: Represents an "is-a" relationship. For example, <code>Dog</code> is a subclass of <code>Animal</code>, meaning <code>Dog</code> is an <code>Animal</code>.</li>
+<li><strong>Composition</strong>: Represents a "has-a" relationship. For example, a <code>Car</code> has an <code>Engine</code>. Composition is often preferred over inheritance for code reuse when the relationship between classes is not an "is-a" relationship.</li>
+</ul></li>
+<li><p><strong>Explain garbage collection in Java.</strong></p>
+
+<ul>
+<li>Java provides automatic memory management with garbage collection. The Garbage Collector (GC) identifies and removes objects that are no longer in use, freeing memory for new objects. This helps prevent memory leaks and ensures efficient memory utilization.</li>
+</ul></li>
+<li><p><strong>What is the difference between <code>==</code> and <code>equals()</code> in Java?</strong></p>
+
+<ul>
+<li><strong><code>==</code></strong>: This is the reference comparison operator, checking whether two references point to the same object in memory.</li>
+<li><strong><code>equals()</code></strong>: This method is used to compare the contents (or state) of two objects, typically overridden to define how two objects should be compared for equality.</li>
+</ul></li>
+<li><p><strong>What is the significance of the <code>static</code> keyword?</strong></p>
+
+<ul>
+<li>The <code>static</code> keyword in Java is used to define class-level methods and variables. Static members belong to the class rather than any specific instance of the class. This means you can access a static method or variable without creating an object of the class (e.g., <code>ClassName.staticMethod()</code>).</li>
+</ul></li>
+<li><p><strong>What are access modifiers, and why are they important?</strong></p>
+
+<ul>
+<li><strong>Private</strong>: Members are accessible only within the class they are defined.</li>
+<li><strong>Default</strong> (no modifier): Members are accessible within the same package.</li>
+<li><strong>Protected</strong>: Members are accessible within the same package or by subclasses in different packages.</li>
+<li><strong>Public</strong>: Members are accessible from any class.</li>
+<li>They are important because they define the level of access control and encapsulation for class members.</li>
+</ul></li>
+</ol>
