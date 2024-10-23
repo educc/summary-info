@@ -1,1 +1,255 @@
-<p></p>
+<h1>SOLID Principles</h1>
+
+<ul>
+<li><a href="#solid-principles">SOLID Principles</a></li>
+<li><a href="#1-introduction-to-solid-principles">1. Introduction to SOLID Principles</a></li>
+<li><a href="#2-single-responsibility-principle-srp">2. Single Responsibility Principle (SRP)</a></li>
+<li><a href="#3-openclosed-principle-ocp">3. Open/Closed Principle (OCP)</a></li>
+<li><a href="#4-liskov-substitution-principle-lsp">4. Liskov Substitution Principle (LSP)</a></li>
+<li><a href="#5-interface-segregation-principle-isp">5. Interface Segregation Principle (ISP)</a></li>
+<li><a href="#6-dependency-inversion-principle-dip">6. Dependency Inversion Principle (DIP)</a></li>
+<li><a href="#8-challenges-and-common-pitfalls">8. Challenges and Common Pitfalls</a></li>
+<li><a href="#9-testing-and-solid">9. Testing and SOLID</a></li>
+<li><a href="#10-common-interview-questions">10. Common interview questions</a></li>
+</ul>
+
+<h1>1. Introduction to SOLID Principles</h1>
+
+<ul>
+<li><strong>What is SOLID?</strong>
+<ul>
+<li>Five design principles to improve software design, those are important for creating maintainable, scalable, and flexible code.</li>
+</ul></li>
+<li><strong>Origin and Purpose</strong>
+<ul>
+<li>Historical context (coined by Robert C. Martin).</li>
+<li>Relationship between SOLID principles and object-oriented programming (OOP).</li>
+</ul></li>
+</ul>
+
+<h1>2. Single Responsibility Principle (SRP)</h1>
+
+<ul>
+<li><strong>Definition</strong>: A class should have only one reason to change, meaning it should have only one job or responsibility.</li>
+<li><strong>Why is SRP Important?</strong>
+<ul>
+<li>Clear class structure and easier maintenance.</li>
+<li>Avoiding "god classes" that handle too many responsibilities.</li>
+</ul></li>
+<li><strong>Examples in Java</strong>:
+<ul>
+<li>Refactor a class with multiple responsibilities into smaller classes.</li>
+</ul></li>
+<li><strong>Anti-Pattern</strong>: Discuss examples of violations like “Spaghetti Code.”</li>
+</ul>
+
+<h1>3. Open/Closed Principle (OCP)</h1>
+
+<ul>
+<li><strong>Definition</strong>: Software entities (classes, modules, functions) should be open for extension but closed for modification.</li>
+<li><strong>Why OCP Matters</strong>:
+<ul>
+<li>Encourages adding new functionality without changing existing code, reducing bugs.</li>
+</ul></li>
+<li><strong>Examples in Java</strong>:
+<ul>
+<li>Use of inheritance and interfaces to extend behavior without modifying existing classes.</li>
+</ul></li>
+<li><strong>Real-World Use</strong>: How frameworks and libraries use OCP (e.g., Java’s IO classes).</li>
+</ul>
+
+<h1>4. Liskov Substitution Principle (LSP)</h1>
+
+<ul>
+<li><strong>Definition</strong>: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.</li>
+<li><strong>Why LSP is Crucial</strong>:
+<ul>
+<li>Promotes good inheritance practices.</li>
+<li>Ensures subclasses don’t break functionality when used in place of base classes.</li>
+</ul></li>
+<li><strong>Examples in Java</strong>:
+<ul>
+<li>Proper inheritance design with abstract classes and interfaces.</li>
+</ul></li>
+<li><strong>Common Violations</strong>: Explaining common mistakes, such as breaking polymorphism.</li>
+</ul>
+
+<h1>5. Interface Segregation Principle (ISP)</h1>
+
+<ul>
+<li><strong>Definition</strong>: A client should not be forced to implement an interface it doesn’t use. Multiple specific interfaces are better than one general-purpose interface.</li>
+<li><strong>Why ISP is Important</strong>:
+<ul>
+<li>Reduces unnecessary code dependencies.</li>
+<li>Promotes smaller, more focused interfaces.</li>
+</ul></li>
+<li><strong>Examples in Java</strong>:
+<ul>
+<li>Breaking down large interfaces into smaller, more cohesive ones.</li>
+<li>Java’s <code>List</code>, <code>Set</code>, and <code>Queue</code> interfaces as examples of good segregation.</li>
+</ul></li>
+<li><strong>Anti-Pattern</strong>: “Fat Interface” examples and how to avoid them.</li>
+</ul>
+
+<h1>6. Dependency Inversion Principle (DIP)</h1>
+
+<ul>
+<li><strong>Definition</strong>: High-level modules should not depend on low-level modules. Both should depend on abstractions (interfaces).</li>
+<li><strong>Importance of DIP</strong>:
+<ul>
+<li>Encourages loose coupling and makes the system more modular and testable.</li>
+</ul></li>
+<li><strong>Examples in Java</strong>:
+<ul>
+<li>Use of Dependency Injection frameworks like Spring.</li>
+</ul></li>
+<li><strong>Practical Example</strong>: Refactoring code to use interfaces rather than concrete classes to follow DIP.</li>
+</ul>
+
+<h1>8. Challenges and Common Pitfalls</h1>
+
+<ul>
+<li><strong>Over-engineering</strong>: When applying SOLID might lead to unnecessary complexity.</li>
+<li><strong>Balance</strong>: Knowing when to apply SOLID and when it’s acceptable to deviate.</li>
+</ul>
+
+<h1>9. Testing and SOLID</h1>
+
+<ul>
+<li><strong>Unit Testing and SOLID</strong>: How adhering to SOLID principles makes unit testing easier.</li>
+<li><strong>Mocking and Dependency Injection</strong>: Using mocking frameworks like Mockito to demonstrate DIP.</li>
+</ul>
+
+<h1>10. Common interview questions</h1>
+
+<ol>
+<li>What is the Single Responsibility Principle (SRP), and why is it important?
+<strong>Answer</strong>:<br />
+The Single Responsibility Principle states that a class should have only one reason to change, meaning it should have only one responsibility or function.<br />
+<strong>Importance</strong>:  </li>
+</ol>
+
+<ul>
+<li>It improves code readability and maintainability.</li>
+<li>Easier to test since each class has a well-defined purpose.</li>
+<li>Reduces the chance of introducing bugs when modifying the code.</li>
+</ul>
+
+<p><strong>Business Example</strong>:<br />
+Imagine you have an <code>Invoice</code> class that handles generating invoices, sending them to customers via email, and applying discounts. Over time, adding or modifying the discount logic might break the email functionality or vice versa. By separating the <code>Invoice</code> class into <code>InvoiceGenerator</code>, <code>EmailSender</code>, and <code>DiscountService</code>, each class has a single responsibility, making the code easier to maintain.</p>
+
+<hr />
+
+<ol start="2">
+<li>How does the Open/Closed Principle (OCP) help in extending software functionality?
+<strong>Answer</strong>:<br />
+The Open/Closed Principle states that software entities should be open for extension but closed for modification.<br />
+<strong>Explanation</strong>:<br />
+This means that new functionality can be added by extending the behavior of existing components (e.g., through inheritance or composition) without altering the existing code. It minimizes the risk of introducing bugs while adding new features.</li>
+</ol>
+
+<p><strong>Business Example</strong>:<br />
+Suppose you have an e-commerce platform that calculates shipping costs based on location. Initially, it supports two countries. Later, you want to add support for more countries and different shipping methods. By using the OCP, you can create a <code>ShippingCalculator</code> interface and implement different calculators (<code>USShipping</code>, <code>CanadaShipping</code>) without modifying the existing code. When adding new countries, you simply create new classes that extend this interface.</p>
+
+<hr />
+
+<ol start="3">
+<li>What is the Liskov Substitution Principle (LSP), and how can violating it cause issues in a system?
+<strong>Answer</strong>:<br />
+The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.<br />
+<strong>Violations</strong>:  </li>
+</ol>
+
+<ul>
+<li>Violating LSP occurs when a subclass alters the behavior of a base class in an unexpected way, breaking the functionality.</li>
+<li>For example, if a subclass method overrides the parent class's method and changes the expected behavior, users relying on the parent class will experience unexpected results or bugs.</li>
+</ul>
+
+<p><strong>Business Example</strong>:<br />
+In a payment processing system, if there’s a <code>Payment</code> class with a <code>processPayment()</code> method, and you create a subclass <code>CreditCardPayment</code> that modifies how payments are processed, the system could crash or behave unexpectedly if it's expecting <code>Payment</code> but receives <code>CreditCardPayment</code>. The system should treat all payments uniformly without knowing the specifics of the subclass.</p>
+
+<hr />
+
+<ol start="4">
+<li>Can you explain the Interface Segregation Principle (ISP) with an example?
+<strong>Answer</strong>:<br />
+The Interface Segregation Principle states that a client should not be forced to implement interfaces it doesn’t use.<br />
+<strong>Example</strong>:<br />
+If you have a <code>CustomerService</code> interface that contains methods like <code>createCustomer()</code>, <code>updateCustomer()</code>, <code>deleteCustomer()</code>, and <code>generateCustomerReport()</code>, a class like <code>ReportService</code> should not be forced to implement customer creation methods it doesn’t need. Instead, you should split the interface into smaller, more focused interfaces like <code>CustomerManagement</code> and <code>CustomerReporting</code>.</li>
+</ol>
+
+<p><strong>Business Example</strong>:<br />
+In an online banking system, separating interfaces ensures that the <code>AccountService</code> doesn’t need to implement a method like <code>generateFinancialReport()</code>, which is irrelevant to its functionality. You should create separate interfaces for managing accounts and generating reports.</p>
+
+<hr />
+
+<ol start="5">
+<li>What is the Dependency Inversion Principle (DIP), and how does it differ from traditional dependency management?
+<strong>Answer</strong>:<br />
+The Dependency Inversion Principle states that high-level modules should not depend on low-level modules; both should depend on abstractions.<br />
+<strong>Difference from traditional dependency management</strong>:  </li>
+</ol>
+
+<ul>
+<li>In traditional design, high-level modules depend on low-level implementations, creating tight coupling.</li>
+<li>With DIP, the high-level and low-level modules both depend on interfaces or abstract classes, allowing for loose coupling and more flexibility, particularly in terms of unit testing and code extensibility.</li>
+</ul>
+
+<p><strong>Business Example</strong>:<br />
+In an inventory management system, the <code>OrderService</code> should not depend directly on a specific database implementation like <code>MySQLDatabase</code>. Instead, it should depend on an abstract <code>Database</code> interface, allowing you to switch between databases (e.g., <code>MySQLDatabase</code>, <code>MongoDatabase</code>) without changing the <code>OrderService</code> class. This also allows for easier testing by mocking the <code>Database</code> interface.</p>
+
+<hr />
+
+<ol start="6">
+<li>How would you refactor a class that violates the Single Responsibility Principle?
+<strong>Answer</strong>:<br />
+To refactor a class that violates SRP, you need to break it into smaller classes, each with a single responsibility.<br />
+<strong>Business Example</strong>:<br />
+If a <code>ProductCatalog</code> class handles both fetching product data and applying pricing rules (like discounts), you can split this into two classes: <code>ProductDataFetcher</code> (which fetches product data from the database) and <code>PricingService</code> (which applies pricing rules). This makes each class easier to modify without affecting the other.</li>
+</ol>
+
+<hr />
+
+<ol start="7">
+<li>How do design patterns relate to the Open/Closed Principle (OCP)?
+<strong>Answer</strong>:<br />
+Many design patterns, like the <strong>Decorator</strong>, <strong>Strategy</strong>, and <strong>Factory</strong>, embody the Open/Closed Principle by allowing a system to be extended with new behavior without modifying existing code.<br />
+<strong>Example</strong>:<br />
+The <strong>Decorator pattern</strong> allows adding new responsibilities to objects by wrapping them in a decorator class, making it a great example of OCP in action.</li>
+</ol>
+
+<p><strong>Business Example</strong>:<br />
+In a restaurant ordering system, if you need to add features like extra toppings for a pizza without modifying the core <code>Pizza</code> class, you can create decorators like <code>CheeseDecorator</code> or <code>PepperoniDecorator</code> to extend the <code>Pizza</code> class. This allows for flexible additions without changing the base class.</p>
+
+<hr />
+
+<ol start="8">
+<li>Can you describe a situation where violating the Liskov Substitution Principle could lead to a runtime error?
+<strong>Answer</strong>:<br />
+A violation of LSP can lead to runtime errors if a subclass modifies the expected behavior of a superclass.<br />
+<strong>Business Example</strong>:<br />
+Consider a hotel booking system where a <code>Room</code> class has a <code>book()</code> method. If a subclass <code>ConferenceRoom</code> overrides the <code>book()</code> method and adds restrictions that are not present in the <code>Room</code> class, this could lead to runtime errors if other parts of the system assume all <code>Room</code> objects can be booked the same way. Violating LSP would break the system's assumptions.</li>
+</ol>
+
+<hr />
+
+<ol start="9">
+<li>How does the Interface Segregation Principle (ISP) improve system modularity?
+<strong>Answer</strong>:<br />
+ISP promotes smaller, more focused interfaces that only define the methods a class needs to implement.<br />
+<strong>Improvement in modularity</strong>:<br />
+By breaking down large interfaces, ISP reduces unnecessary dependencies between classes. This leads to a more modular design where classes are easier to maintain, extend, and test.</li>
+</ol>
+
+<p><strong>Business Example</strong>:<br />
+In a retail POS (Point of Sale) system, creating an interface like <code>TransactionService</code> that requires both <code>startTransaction()</code>, <code>cancelTransaction()</code>, and <code>processRefund()</code> methods forces the <code>TransactionService</code> to handle refunds even if refunds are processed by a separate <code>RefundService</code>. By splitting the interface into <code>TransactionService</code> and <code>RefundService</code>, you increase modularity and reduce unnecessary method implementations.</p>
+
+<hr />
+
+<ol start="10">
+<li>How would you implement the Dependency Inversion Principle (DIP) in a Java project?
+<strong>Answer</strong>:<br />
+To implement DIP, you would introduce interfaces or abstract classes to decouple the high-level modules from the low-level modules.<br />
+<strong>Business Example</strong>:<br />
+In a payroll processing system, instead of having the <code>PayrollService</code> depend directly on a concrete <code>TaxCalculator</code> class, you could create a <code>TaxCalculator</code> interface. The <code>PayrollService</code> would then depend on the <code>TaxCalculator</code> interface, making it easy to swap out different tax calculation strategies (e.g., for different regions or tax laws) without modifying the <code>PayrollService</code> itself.</li>
+</ol>
