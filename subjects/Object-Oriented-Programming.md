@@ -1,9 +1,17 @@
-# Object-Oriented Programming (OOP)
 
-## 1. Definition
+# Object-Oriented Programming (OOP) 
+- [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
+- [1. Definition](#1-definition)
+- [2. Core Principles (Pillars)](#2-core-principles-pillars)
+- [3. Benefits of OOP](#3-benefits-of-oop)
+- [4. Classes and Objects](#4-classes-and-objects)
+- [5. Common Interview Questions](#5-common-interview-questions)
+
+
+# 1. Definition
 Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data in the form of fields (attributes) and code in the form of methods (functions). OOP is centered around the idea of structuring programs so that data and operations are encapsulated within these objects, promoting code organization and reuse.
 
-## 2. Core Principles (Pillars)
+# 2. Core Principles (Pillars)
 The four core principles of OOP form the foundation for creating flexible, reusable, and maintainable software designs:
 
 - **Encapsulation**:
@@ -22,7 +30,7 @@ The four core principles of OOP form the foundation for creating flexible, reusa
   - **Definition**: Polymorphism allows objects to be treated as instances of their parent class. It enables one interface to be used for a general class of actions, allowing behavior to vary depending on the actual object (dynamic method dispatch).
   - **Example**: A method like `draw()` might work differently for a `Circle`, `Rectangle`, or `Triangle` but is called in the same way.
 
-## 3. Benefits of OOP
+# 3. Benefits of OOP
 - **Code Reusability**: 
   - OOP encourages the reuse of existing classes and objects, reducing redundancy and duplication of code. For example, through inheritance, a subclass can reuse methods and attributes from a parent class.
   
@@ -35,7 +43,7 @@ The four core principles of OOP form the foundation for creating flexible, reusa
 - **Ease of Debugging**: 
   - Since objects represent real-world entities, it’s easier to conceptualize and debug software systems. Well-encapsulated objects with clearly defined behavior lead to better modularity and isolation of errors.
 
-## 4. Classes and Objects
+# 4. Classes and Objects
 - **Class Definition**: 
   - A class is a blueprint for creating objects. It defines the attributes (fields) and behaviors (methods) that the objects instantiated from the class will have. For example, a `Car` class might have fields like `color`, `make`, `model`, and methods like `startEngine()`, `drive()`.
   
@@ -50,7 +58,7 @@ The four core principles of OOP form the foundation for creating flexible, reusa
     - **Default Constructor**: A constructor with no parameters.
     - **Parameterized Constructor**: A constructor with parameters to initialize object attributes when the object is created.
 
-## 5. Common Interview Questions
+# 5. Common Interview Questions
 
 1. **What are the differences between an abstract class and an interface?**
    - Abstract classes can have both concrete methods and abstract methods (methods without a body), while interfaces only declare method signatures by default (before Java 8) and require classes to implement those methods. After Java 8, interfaces can have default and static methods.
@@ -76,18 +84,21 @@ The four core principles of OOP form the foundation for creating flexible, reusa
 6. **What is the difference between composition and inheritance?**
    - **Inheritance**: Represents an "is-a" relationship. For example, `Dog` is a subclass of `Animal`, meaning `Dog` is an `Animal`.
    - **Composition**: Represents a "has-a" relationship. For example, a `Car` has an `Engine`. Composition is often preferred over inheritance for code reuse when the relationship between classes is not an "is-a" relationship.
+  
+7. **What is the difference between Encapsulation and Abstraction?**
+   Abstraction hides the internal complexity of a Class and only exposes what is needed for other Classes, example a Arrays.sort can sort any object without knowing how this is done. While Encapsulation helps hiding the internal fields or methods require to perform the sort.
 
-7. **Explain garbage collection in Java.**
+8. **Explain garbage collection in Java.**
    - Java provides automatic memory management with garbage collection. The Garbage Collector (GC) identifies and removes objects that are no longer in use, freeing memory for new objects. This helps prevent memory leaks and ensures efficient memory utilization.
   
-8. **What is the difference between `==` and `equals()` in Java?**
+9. **What is the difference between `==` and `equals()` in Java?**
    - **`==`**: This is the reference comparison operator, checking whether two references point to the same object in memory.
    - **`equals()`**: This method is used to compare the contents (or state) of two objects, typically overridden to define how two objects should be compared for equality.
 
-9. **What is the significance of the `static` keyword?**
+10. **What is the significance of the `static` keyword?**
    - The `static` keyword in Java is used to define class-level methods and variables. Static members belong to the class rather than any specific instance of the class. This means you can access a static method or variable without creating an object of the class (e.g., `ClassName.staticMethod()`).
 
-10. **What are access modifiers, and why are they important?**
+11. **What are access modifiers, and why are they important?**
     - **Private**: Members are accessible only within the class they are defined.
     - **Default** (no modifier): Members are accessible within the same package.
     - **Protected**: Members are accessible within the same package or by subclasses in different packages.
