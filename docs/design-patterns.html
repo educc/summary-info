@@ -1,1 +1,201 @@
-<p>https://refactoring.guru/design-patterns</p>
+<h1>Design Patterns in Object-Oriented Programming (OOP)</h1>
+
+<ul>
+<li><a href="#design-patterns-in-object-oriented-programming-oop">Design Patterns in Object-Oriented Programming (OOP)</a>
+<ul>
+<li><a href="#1-introduction-to-design-patterns">1. <strong>Introduction to Design Patterns</strong></a></li>
+<li><a href="#2-creational-design-patterns">2. <strong>Creational Design Patterns</strong></a></li>
+<li><a href="#3-structural-design-patterns">3. <strong>Structural Design Patterns</strong></a></li>
+<li><a href="#4-behavioral-design-patterns">4. <strong>Behavioral Design Patterns</strong></a></li>
+<li><a href="#5-principles-related-to-design-patterns">5. <strong>Principles Related to Design Patterns</strong></a></li>
+<li><a href="#6-anti-patterns">6. <strong>Anti-Patterns</strong></a></li>
+<li><a href="#7-best-practices-for-applying-design-patterns">7. <strong>Best Practices for Applying Design Patterns</strong></a></li>
+<li><a href="#8-real-world-applications-of-design-patterns">8. <strong>Real-World Applications of Design Patterns</strong></a></li>
+<li><a href="#9-conclusion">9. <strong>Conclusion</strong></a></li>
+<li><a href="#10-common-interview-questions-on-design-patterns">10. <strong>Common Interview Questions on Design Patterns</strong></a>
+<ul>
+<li><a href="#1-what-are-design-patterns-and-why-are-they-important-in-software-development">1. <strong>What are design patterns, and why are they important in software development?</strong></a></li>
+<li><a href="#2-can-you-explain-the-difference-between-a-factory-method-and-an-abstract-factory">2. <strong>Can you explain the difference between a Factory Method and an Abstract Factory?</strong></a></li>
+<li><a href="#3-what-is-the-singleton-pattern-and-when-would-you-use-it">3. <strong>What is the Singleton pattern, and when would you use it?</strong></a></li>
+<li><a href="#4-how-does-the-strategy-pattern-differ-from-the-state-pattern">4. <strong>How does the Strategy pattern differ from the State pattern?</strong></a></li>
+<li><a href="#5-what-is-the-difference-between-composition-and-inheritance-and-how-does-the-composite-pattern-leverage-this">5. <strong>What is the difference between composition and inheritance, and how does the Composite pattern leverage this?</strong></a></li>
+<li><a href="#6-explain-the-difference-between-the-adapter-pattern-and-the-facade-pattern">6. <strong>Explain the difference between the Adapter pattern and the Facade pattern.</strong></a></li>
+<li><a href="#7-what-is-the-observer-pattern-and-how-does-it-relate-to-the-publishsubscribe-model">7. <strong>What is the Observer pattern, and how does it relate to the Publish/Subscribe model?</strong></a></li>
+<li><a href="#8-how-does-the-decorator-pattern-differ-from-the-proxy-pattern">8. <strong>How does the Decorator pattern differ from the Proxy pattern?</strong></a></li>
+<li><a href="#9-what-are-the-solid-principles-and-how-do-they-relate-to-design-patterns">9. <strong>What are the SOLID principles, and how do they relate to design patterns?</strong></a></li>
+<li><a href="#10-can-you-provide-a-real-world-example-where-you-have-applied-a-design-pattern">10. <strong>Can you provide a real-world example where you have applied a design pattern?</strong></a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>For more detail explanations and examples go to https://refactoring.guru/design-patterns</p>
+
+<h2>1. <strong>Introduction to Design Patterns</strong></h2>
+
+<ul>
+<li><strong>Definition and Importance</strong>: Understanding what design patterns are, their role in solving common design problems, and their place in OOP.</li>
+<li><strong>Types of Design Patterns</strong>: 
+<ul>
+<li>Creational</li>
+<li>Structural</li>
+<li>Behavioral</li>
+</ul></li>
+<li><strong>Key Benefits</strong>: Reusability, maintainability, and scalability.</li>
+</ul>
+
+<h2>2. <strong>Creational Design Patterns</strong></h2>
+
+<ul>
+<li><strong>Overview</strong>: Focus on how objects are created to ensure flexibility and reuse of code.</li>
+<li><strong>Key Patterns</strong>:
+<ul>
+<li><strong>Singleton</strong>: Ensures a class has only one instance and provides a global point of access to it.</li>
+<li><strong>Factory Method</strong>: Defines an interface for creating objects but lets subclasses alter the type of objects that will be created.</li>
+<li><strong>Abstract Factory</strong>: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.</li>
+<li><strong>Builder</strong>: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.</li>
+<li><strong>Prototype</strong>: Creates new objects by copying an existing object, known as the prototype.</li>
+</ul></li>
+</ul>
+
+<h2>3. <strong>Structural Design Patterns</strong></h2>
+
+<ul>
+<li><strong>Overview</strong>: Deal with object composition and typically define relationships between classes or objects.</li>
+<li><strong>Key Patterns</strong>:
+<ul>
+<li><strong>Adapter</strong>: Allows incompatible interfaces to work together by providing a wrapper that translates requests.</li>
+<li><strong>Bridge</strong>: Decouples an abstraction from its implementation so that the two can vary independently.</li>
+<li><strong>Composite</strong>: Composes objects into tree structures to represent part-whole hierarchies, allowing clients to treat individual objects and compositions of objects uniformly.</li>
+<li><strong>Decorator</strong>: Adds behavior or responsibilities to objects dynamically without modifying their code.</li>
+<li><strong>Facade</strong>: Provides a simplified interface to a complex subsystem.</li>
+<li><strong>Flyweight</strong>: Reduces the cost of creating and manipulating a large number of similar objects by sharing them.</li>
+<li><strong>Proxy</strong>: Provides a placeholder or surrogate for another object to control access to it.</li>
+</ul></li>
+</ul>
+
+<h2>4. <strong>Behavioral Design Patterns</strong></h2>
+
+<ul>
+<li><strong>Overview</strong>: Concerned with communication between objects and responsibilities of objects.</li>
+<li><strong>Key Patterns</strong>:
+<ul>
+<li><strong>Chain of Responsibility</strong>: Passes a request along a chain of handlers, where each handler can either process the request or pass it on to the next handler in the chain.</li>
+<li><strong>Command</strong>: Encapsulates a request as an object, thereby allowing users to parameterize clients with different requests, queue requests, and support undoable operations.</li>
+<li><strong>Interpreter</strong>: Implements an expression interface to interpret a language, defining a grammatical representation for a language and providing an interpreter to deal with this grammar.</li>
+<li><strong>Iterator</strong>: Provides a way to access elements of a collection sequentially without exposing its underlying representation.</li>
+<li><strong>Mediator</strong>: Centralizes complex communication and control logic between related objects.</li>
+<li><strong>Memento</strong>: Captures and restores an object’s internal state without violating encapsulation.</li>
+<li><strong>Observer</strong>: Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</li>
+<li><strong>State</strong>: Allows an object to alter its behavior when its internal state changes, appearing as if the object has changed its class.</li>
+<li><strong>Strategy</strong>: Defines a family of algorithms, encapsulates each one, and makes them interchangeable.</li>
+<li><strong>Template Method</strong>: Defines the skeleton of an algorithm, deferring some steps to subclasses without changing the algorithm’s structure.</li>
+<li><strong>Visitor</strong>: Represents an operation to be performed on elements of an object structure without changing the classes on which it operates.</li>
+</ul></li>
+</ul>
+
+<h2>5. <strong>Principles Related to Design Patterns</strong></h2>
+
+<ul>
+<li><strong>SOLID Principles</strong>:
+<ul>
+<li><strong>Single Responsibility Principle (SRP)</strong>: A class should have only one reason to change, meaning it should have only one job.</li>
+<li><strong>Open/Closed Principle (OCP)</strong>: Software entities should be open for extension, but closed for modification.</li>
+<li><strong>Liskov Substitution Principle (LSP)</strong>: Subtypes should be substitutable for their base types without altering the correctness of the program.</li>
+<li><strong>Interface Segregation Principle (ISP)</strong>: Clients should not be forced to depend on interfaces they do not use.</li>
+<li><strong>Dependency Inversion Principle (DIP)</strong>: High-level modules should not depend on low-level modules, both should depend on abstractions.</li>
+</ul></li>
+</ul>
+
+<h2>6. <strong>Anti-Patterns</strong></h2>
+
+<ul>
+<li><strong>Definition</strong>: Common responses to recurring problems that are ineffective and counterproductive.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li>God Object</li>
+<li>Spaghetti Code</li>
+<li>Lava Flow</li>
+<li>Big Ball of Mud</li>
+</ul></li>
+</ul>
+
+<h2>7. <strong>Best Practices for Applying Design Patterns</strong></h2>
+
+<ul>
+<li><strong>Choosing the Right Pattern</strong>: Patterns should be applied to specific problems, not force-fit into every design.</li>
+<li><strong>Pattern Overuse</strong>: Recognizing when not to use design patterns and avoiding pattern obsession.</li>
+<li><strong>Refactoring</strong>: Using design patterns as a tool to improve existing code.</li>
+</ul>
+
+<h2>8. <strong>Real-World Applications of Design Patterns</strong></h2>
+
+<ul>
+<li><strong>Case Studies</strong>: Examples of how design patterns are applied in real-world applications such as web development, mobile apps, game development, and enterprise systems.</li>
+<li><strong>Design Patterns in Frameworks</strong>: How modern frameworks (e.g., Spring, Django, React) utilize design patterns under the hood.</li>
+</ul>
+
+<h2>9. <strong>Conclusion</strong></h2>
+
+<ul>
+<li><strong>Importance of Design Patterns</strong>: Summarizing how design patterns can enhance the design, flexibility, and maintainability of OOP-based systems.</li>
+<li><strong>Further Reading &amp; Practice</strong>: Recommended books (e.g., "Design Patterns: Elements of Reusable Object-Oriented Software") and practice exercises.</li>
+</ul>
+
+<h2>10. <strong>Common Interview Questions on Design Patterns</strong></h2>
+
+<h3>1. <strong>What are design patterns, and why are they important in software development?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   Design patterns are typical solutions to common problems in software design. They are blueprints that can be customized to solve specific design issues. They help in creating more flexible, reusable, and maintainable code. Using design patterns also improves communication between developers since they provide a shared vocabulary for solutions.</p>
+
+<h3>2. <strong>Can you explain the difference between a Factory Method and an Abstract Factory?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   The <strong>Factory Method</strong> pattern allows subclasses to decide which class to instantiate. It's focused on the creation of a single product. The <strong>Abstract Factory</strong> pattern, on the other hand, provides an interface to create families of related or dependent objects without specifying their concrete classes. The Abstract Factory is used when multiple products are needed, but the exact type isn't known until runtime.</p>
+
+<h3>3. <strong>What is the Singleton pattern, and when would you use it?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   The <strong>Singleton</strong> pattern ensures that a class has only one instance and provides a global point of access to that instance. It's commonly used when exactly one object is needed to coordinate actions across the system, such as in logging, database connection pooling, or configuration settings.</p>
+
+<h3>4. <strong>How does the Strategy pattern differ from the State pattern?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   Both patterns allow behavior to be changed at runtime, but the <strong>Strategy</strong> pattern is used when you want to switch between interchangeable algorithms or behaviors dynamically. The <strong>State</strong> pattern is used to alter the behavior of an object when its internal state changes. The key difference is that <strong>Strategy</strong> focuses on choosing an algorithm, while <strong>State</strong> deals with changing the object's behavior as it transitions between different states.</p>
+
+<h3>5. <strong>What is the difference between composition and inheritance, and how does the Composite pattern leverage this?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   <strong>Inheritance</strong> is a mechanism to extend existing functionality by creating a subclass. <strong>Composition</strong>, on the other hand, is the practice of building complex objects by combining simpler objects. The <strong>Composite</strong> pattern leverages composition by structuring objects into tree hierarchies where individual objects and compositions (composed of many objects) are treated uniformly. This pattern is often used for building structures like file systems or UI components.</p>
+
+<h3>6. <strong>Explain the difference between the Adapter pattern and the Facade pattern.</strong></h3>
+
+<p><strong>Answer</strong>: 
+   The <strong>Adapter</strong> pattern is used to convert an interface of a class into another interface the client expects. It allows classes with incompatible interfaces to work together. The <strong>Facade</strong> pattern, on the other hand, provides a simplified interface to a complex system, making it easier to use but without altering the subsystem itself. In short, Adapter is for compatibility between interfaces, while Facade is for simplifying a complex system.</p>
+
+<h3>7. <strong>What is the Observer pattern, and how does it relate to the Publish/Subscribe model?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   The <strong>Observer</strong> pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents (observers) are notified and updated automatically. This is similar to the <strong>Publish/Subscribe</strong> model, where publishers broadcast messages to multiple subscribers without knowing who they are, and subscribers automatically receive updates. The Observer pattern is often used in GUIs and event-driven systems.</p>
+
+<h3>8. <strong>How does the Decorator pattern differ from the Proxy pattern?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   The <strong>Decorator</strong> pattern adds behavior or functionality to an object dynamically, without altering its structure. It is used to wrap objects to extend their functionality. The <strong>Proxy</strong> pattern provides a surrogate or placeholder for another object to control access to it, like adding security, lazy initialization, or logging. While both patterns wrap objects, Decorator focuses on adding features, and Proxy focuses on controlling access.</p>
+
+<h3>9. <strong>What are the SOLID principles, and how do they relate to design patterns?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   The <strong>SOLID</strong> principles are a set of guidelines for designing flexible, maintainable, and scalable object-oriented systems:
+   - <strong>S</strong>ingle Responsibility: A class should have only one reason to change.
+   - <strong>O</strong>pen/Closed: Classes should be open for extension but closed for modification.
+   - <strong>L</strong>iskov Substitution: Subtypes must be replaceable for their base types without affecting the correctness of the program.
+   - <strong>I</strong>nterface Segregation: Clients should not be forced to depend on interfaces they do not use.
+   - <strong>D</strong>ependency Inversion: High-level modules should depend on abstractions, not on low-level modules.</p>
+
+<p>Many design patterns adhere to SOLID principles. For example, the <strong>Factory Method</strong> and <strong>Abstract Factory</strong> patterns support the Open/Closed Principle by allowing easy extension of product creation without modifying existing code.</p>
+
+<h3>10. <strong>Can you provide a real-world example where you have applied a design pattern?</strong></h3>
+
+<p><strong>Answer</strong>: 
+   One common example is using the <strong>Singleton</strong> pattern to manage database connections in a web application. Since opening multiple database connections can be resource-intensive, ensuring there is only one connection instance shared across the application saves resources and prevents issues like overloading the database server. Another example is using the <strong>Strategy</strong> pattern in a payment processing system where different payment methods (credit card, PayPal, etc.) can be selected dynamically at runtime.</p>
