@@ -1,0 +1,231 @@
+<h1>RESTful Architecture: Semester Summary</h1>
+
+<ul>
+<li><a href="#restful-architecture-semester-summary">RESTful Architecture: Semester Summary</a>
+<ul>
+<li><a href="#1-introduction-to-rest">1. Introduction to REST</a></li>
+<li><a href="#2-principles-of-restful-design">2. Principles of RESTful Design</a></li>
+<li><a href="#3-restful-constraints">3. RESTful Constraints</a></li>
+<li><a href="#4-rest-vs-soap">4. REST vs SOAP</a></li>
+<li><a href="#5-resource-modeling-in-rest">5. Resource Modeling in REST</a></li>
+<li><a href="#6-restful-best-practices">6. RESTful Best Practices</a></li>
+<li><a href="#7-http-status-codes">7. HTTP Status Codes</a></li>
+<li><a href="#8-restful-tools-and-technologies">8. RESTful Tools and Technologies</a></li>
+<li><a href="#9-restful-api-testing">9. RESTful API Testing</a></li>
+<li><a href="#10-ten-common-questions-for-software-engineers-about-restful">10. Ten Common Questions for Software Engineers about RESTful</a></li>
+</ul></li>
+</ul>
+
+<h2>1. Introduction to REST</h2>
+
+<ul>
+<li><strong>Definition</strong>: REST (Representational State Transfer) as an architectural style.</li>
+<li><strong>History and Origins</strong>: Introduced by Roy Fielding in 2000.</li>
+<li><strong>Key Concepts</strong>:
+<ul>
+<li>Statelessness</li>
+<li>Client-Server architecture</li>
+<li>Uniform Interface</li>
+<li>Layered System</li>
+<li>Code on Demand (optional)</li>
+<li>Cacheable responses</li>
+</ul></li>
+</ul>
+
+<h2>2. Principles of RESTful Design</h2>
+
+<ul>
+<li><strong>Statelessness</strong>: Each request from client to server must contain all the information needed to understand and process the request.</li>
+<li><strong>Resource Identification through URIs</strong>: Resources are identified using URIs.</li>
+<li><strong>Representation of Resources</strong>: Resources are represented in formats like JSON, XML, HTML.</li>
+<li><strong>HTTP Methods</strong>: The core methods used in RESTful services:
+<ul>
+<li><code>GET</code>: Retrieve data</li>
+<li><code>POST</code>: Create a new resource</li>
+<li><code>PUT</code>: Update a resource</li>
+<li><code>DELETE</code>: Remove a resource</li>
+</ul></li>
+<li><strong>Idempotence</strong>: Repeating the same request should produce the same outcome (applies to methods like <code>PUT</code> and <code>DELETE</code>).</li>
+</ul>
+
+<h2>3. RESTful Constraints</h2>
+
+<ul>
+<li><strong>Uniform Interface</strong>: A well-defined interface between components.</li>
+<li><strong>Stateless</strong>: No client context is stored on the server between requests.</li>
+<li><strong>Cacheable</strong>: Responses must define themselves as cacheable or not.</li>
+<li><strong>Client-Server</strong>: Separation of concerns between client and server.</li>
+<li><strong>Layered System</strong>: Components are organized in layers, restricting the behavior of components at each layer.</li>
+</ul>
+
+<h2>4. REST vs SOAP</h2>
+
+<ul>
+<li><strong>SOAP</strong>: Simple Object Access Protocol.</li>
+<li><strong>REST</strong>: Comparison of performance, simplicity, and use cases.</li>
+<li><strong>Stateless vs Stateful</strong>: How they differ in design philosophy.</li>
+</ul>
+
+<h2>5. Resource Modeling in REST</h2>
+
+<ul>
+<li><strong>Resources and URIs</strong>: How to identify and model resources using URIs.</li>
+<li><strong>Nouns, not Verbs</strong>: Using nouns (e.g., <code>/users/1</code>) instead of verbs (<code>/getUser</code>) for naming resources.</li>
+<li><strong>Hierarchical Modeling</strong>: Organizing resources with nested URIs (e.g., <code>/users/1/posts</code>).</li>
+</ul>
+
+<h2>6. RESTful Best Practices</h2>
+
+<ul>
+<li><strong>Versioning</strong>: Strategies for handling API versioning (e.g., URI versioning <code>/v1/users</code>, or header-based versioning).</li>
+<li><strong>Pagination, Sorting, Filtering</strong>: Handling large datasets with techniques like pagination (<code>?page=2</code>), sorting (<code>?sort=asc</code>), and filtering (<code>?name=John</code>).</li>
+<li><strong>Error Handling</strong>: Standardizing error responses using status codes (e.g., <code>400 Bad Request</code>, <code>404 Not Found</code>) and payload structure.</li>
+<li><strong>Security</strong>: Common practices for securing RESTful APIs, including OAuth, HTTPS, JWT tokens, and API keys.</li>
+</ul>
+
+<h2>7. HTTP Status Codes</h2>
+
+<ul>
+<li><strong>1xx</strong>: Informational responses.</li>
+<li><strong>2xx</strong>: Success responses.</li>
+<li><strong>3xx</strong>: Redirection messages.</li>
+<li><strong>4xx</strong>: Client errors.</li>
+<li><strong>5xx</strong>: Server errors.</li>
+</ul>
+
+<h2>8. RESTful Tools and Technologies</h2>
+
+<ul>
+<li><strong>Postman</strong>: For testing RESTful APIs.</li>
+<li><strong>Swagger/OpenAPI</strong>: For API documentation and design.</li>
+<li><strong>Frameworks</strong>:
+<ul>
+<li><strong>Node.js/Express</strong>: Building RESTful services in JavaScript.</li>
+<li><strong>Django/Flask</strong>: Python-based frameworks for RESTful services.</li>
+<li><strong>Spring Boot</strong>: Java-based framework for building RESTful services.</li>
+</ul></li>
+</ul>
+
+<h2>9. RESTful API Testing</h2>
+
+<ul>
+<li><strong>Unit Testing</strong>: Testing individual API methods.</li>
+<li><strong>Integration Testing</strong>: Testing the interaction between the API and other components.</li>
+<li><p><strong>Tools</strong>:
+    - <strong>Postman</strong>: For manual testing and scripting tests.
+    - <strong>JUnit</strong> (Java) or <strong>pytest</strong> (Python) for automated testing.</p>
+
+<h2>10. Ten Common Questions for Software Engineers about RESTful</h2></li>
+</ul>
+
+<ol>
+<li><p><strong>What is REST and how does it differ from other web service architectures?</strong></p>
+
+<ul>
+<li>REST (Representational State Transfer) is an architectural style for designing networked applications. Unlike SOAP (Simple Object Access Protocol) which is protocol-based and requires strict standards like XML for message format, REST is more flexible, utilizing standard HTTP methods (GET, POST, PUT, DELETE) and can return data in multiple formats like JSON, XML, or HTML. REST is also stateless, whereas SOAP often maintains state between requests.</li>
+</ul></li>
+<li><p><strong>What are the core principles of RESTful services?</strong></p>
+
+<ul>
+<li>The core principles are:
+<ul>
+<li><strong>Statelessness</strong>: Each request from a client must contain all necessary information, as the server doesn’t store client context.</li>
+<li><strong>Client-Server Architecture</strong>: Separation of concerns, with the client focusing on the user interface and the server handling data storage and processing.</li>
+<li><strong>Uniform Interface</strong>: A standardized way to interact with resources, such as well-defined URIs and HTTP methods.</li>
+<li><strong>Layered System</strong>: Components like load balancers or caching servers can be inserted in between the client and the server without changing the interaction.</li>
+<li><strong>Cacheability</strong>: Responses must be labeled as cacheable or non-cacheable to optimize performance.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>What is the purpose of using HTTP methods like GET, POST, PUT, DELETE in RESTful APIs?</strong></p>
+
+<ul>
+<li>Each HTTP method serves a specific role:
+<ul>
+<li><strong>GET</strong>: Retrieve resource data without making any modifications.</li>
+<li><strong>POST</strong>: Create a new resource.</li>
+<li><strong>PUT</strong>: Update an existing resource or create a resource if it doesn’t exist.</li>
+<li><strong>DELETE</strong>: Remove a resource.
+These methods map directly to CRUD operations, making API interactions intuitive and predictable.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>How do you handle versioning in RESTful APIs?</strong></p>
+
+<ul>
+<li>There are several strategies to version RESTful APIs:
+<ul>
+<li><strong>URI Versioning</strong>: Include the version in the URI, such as <code>/api/v1/resource</code>.</li>
+<li><strong>Query Parameters</strong>: Use query parameters like <code>/api/resource?version=1</code>.</li>
+<li><strong>Header-based Versioning</strong>: Include the version in request headers, such as <code>X-API-Version: 1</code>.</li>
+<li><strong>Content Negotiation</strong>: The client specifies the version in the <code>Accept</code> header, like <code>application/vnd.company.resource-v1+json</code>.
+The choice depends on the use case and how you want to manage API backward compatibility.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>How do you design a RESTful API for complex data relationships?</strong></p>
+
+<ul>
+<li>Use <strong>resource modeling</strong> to represent entities and their relationships clearly:
+<ul>
+<li>For 1-to-1 and 1-to-many relationships, use <strong>nested URIs</strong> (e.g., <code>/users/1/orders</code>).</li>
+<li>For many-to-many relationships, use linking tables or resource collections, often accessible through their own endpoints (e.g., <code>/users/1/groups</code>).</li>
+<li>Always keep resource representation in mind and avoid excessive nesting. Keeping resources simple and flat can often lead to better API usability.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>What is statelessness in REST, and why is it important?</strong></p>
+
+<ul>
+<li>Statelessness means that the server does not store any client-specific data between requests. Each request from a client must include all necessary information, such as authentication details or session state. This improves scalability because the server doesn’t need to manage session state, making it easier to distribute requests across multiple servers and recover from failures.</li>
+</ul></li>
+<li><p><strong>How do you ensure security in RESTful APIs?</strong></p>
+
+<ul>
+<li>Common security practices include:
+<ul>
+<li><strong>HTTPS</strong>: Encrypts all traffic between client and server to protect against man-in-the-middle attacks.</li>
+<li><strong>OAuth 2.0</strong>: Provides a secure and standardized way to handle authorization, allowing third-party services to access user resources without exposing user credentials.</li>
+<li><strong>JWT (JSON Web Tokens)</strong>: Compact, self-contained tokens used to transmit information securely between client and server for authentication.</li>
+<li><strong>API Keys</strong>: Simple tokens passed in the request to identify the client.</li>
+<li><strong>CORS (Cross-Origin Resource Sharing)</strong>: Control over which domains are allowed to access the API.</li>
+<li><strong>Rate Limiting</strong>: Protects against DDoS attacks by limiting the number of requests a client can make.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>What are the best practices for handling errors in RESTful APIs?</strong></p>
+
+<ul>
+<li>Use appropriate HTTP status codes to communicate errors clearly:
+<ul>
+<li><code>400 Bad Request</code>: The request could not be understood by the server.</li>
+<li><code>401 Unauthorized</code>: Authentication failed or is missing.</li>
+<li><code>403 Forbidden</code>: The client is authenticated but doesn’t have permission.</li>
+<li><code>404 Not Found</code>: The requested resource could not be found.</li>
+<li><code>500 Internal Server Error</code>: The server encountered an error.</li>
+</ul></li>
+<li>Include a response body with detailed error information, such as error code, message, and any suggestions for how to fix the issue.</li>
+</ul></li>
+<li><p><strong>What are the benefits and limitations of REST compared to other API styles like GraphQL and gRPC?</strong></p>
+
+<ul>
+<li><strong>Benefits</strong>:
+<ul>
+<li>REST is simple, based on HTTP standards, and widely adopted.</li>
+<li>It is stateless and scalable, with a clear mapping between operations and HTTP methods.</li>
+</ul></li>
+<li><strong>Limitations</strong>:
+<ul>
+<li>REST can lead to over-fetching or under-fetching of data, especially for complex queries, as it returns a fixed set of fields.</li>
+<li><strong>GraphQL</strong> offers more flexibility, allowing clients to specify the exact data they need, but comes with complexity.</li>
+<li><strong>gRPC</strong> provides better performance and supports real-time communication with protocol buffers, but is not as widely supported as REST.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>How do you scale a RESTful API to handle millions of requests?</strong></p>
+
+<ul>
+<li>Strategies include:
+<ul>
+<li><strong>Horizontal Scaling</strong>: Distribute requests across multiple servers (load balancing).</li>
+<li><strong>Caching</strong>: Use caching at different levels (client, server, CDN) to reduce the load on the API.</li>
+<li><strong>Database Optimization</strong>: Ensure efficient queries and use database replication or partitioning.</li>
+<li><strong>Rate Limiting and Throttling</strong>: Limit the number of requests per client to prevent overloading the API.</li>
+<li><strong>Microservices</strong>: Break the API into smaller services, allowing for independent scaling.</li>
+</ul></li>
+</ul></li>
+</ol>
