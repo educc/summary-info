@@ -66,86 +66,104 @@
 
 <h2>1. <strong>Spring Framework Overview</strong></h2>
 
-<p>Spring Framework is a comprehensive framework for enterprise Java development. It provides support for building robust, scalable, and maintainable applications. Key components of Spring include:
-- <strong>Inversion of Control (IoC)</strong>: The foundation of Spring, IoC enables loose coupling between components by managing their lifecycle and dependencies via Dependency Injection (DI).
-- <strong>Aspect-Oriented Programming (AOP)</strong>: Allows separation of cross-cutting concerns, like logging or transaction management, from business logic.
-- <strong>Spring MVC</strong>: A flexible, component-based web framework for creating web applications.
-- <strong>Data Access</strong>: Spring provides support for JDBC, ORM, and declarative transaction management.
-- <strong>Testability</strong>: Built-in support for unit and integration testing.</p>
+<p>Spring Framework is a comprehensive framework for enterprise Java development. It provides support for building robust, scalable, and maintainable applications. Key components of Spring include:</p>
+
+<ul>
+<li><p><strong>Inversion of Control (IoC)</strong>: The foundation of Spring, IoC enables loose coupling between components by managing their lifecycle and dependencies via Dependency Injection (DI).</p></li>
+<li><p><strong>Aspect-Oriented Programming (AOP)</strong>: Allows separation of cross-cutting concerns, like logging or transaction management, from business logic.</p></li>
+<li><p><strong>Spring MVC</strong>: A flexible, component-based web framework for creating web applications.</p></li>
+<li><p><strong>Data Access</strong>: Spring provides support for JDBC, ORM, and declarative transaction management.</p></li>
+<li><p><strong>Testability</strong>: Built-in support for unit and integration testing.</p></li>
+</ul>
 
 <h2>2. <strong>Spring Boot</strong></h2>
 
-<p>Spring Boot simplifies the development of Spring-based applications by providing:
-- <strong>Auto-Configuration</strong>: Automatically configures Spring components based on the libraries on the classpath.
-- <strong>Standalone Applications</strong>: Embedded web servers (Tomcat, Jetty, etc.) enable easy deployment without external servers.
-- <strong>Spring Initializr</strong>: A web-based tool for quickly generating Spring Boot projects.
-- <strong>Production-ready Features</strong>: Offers tools like metrics, health checks, and externalized configuration for operational readiness.</p>
+<p>Spring Boot simplifies the development of Spring-based applications by providing:</p>
+
+<ul>
+<li><p><strong>Auto-Configuration</strong>: Automatically configures Spring components based on the libraries on the classpath.</p></li>
+<li><p><strong>Standalone Applications</strong>: Embedded web servers (Tomcat, Jetty, etc.) enable easy deployment without external servers.</p></li>
+<li><p><strong>Spring Initializr</strong>: A web-based tool for quickly generating Spring Boot projects.</p></li>
+<li><p><strong>Production-ready Features</strong>: Offers tools like metrics, health checks, and externalized configuration for operational readiness.</p></li>
+</ul>
 
 <h3>Key Features:</h3>
 
 <ul>
-<li><strong>Spring Boot Starters</strong>: Pre-configured libraries for common use cases (e.g., <code>spring-boot-starter-web</code> for web apps).</li>
-<li><strong>Embedded Servers</strong>: No need for external deployment; apps can run directly using an embedded server.</li>
-<li><strong>Spring Boot Actuator</strong>: Provides operational endpoints to monitor and manage the application.</li>
+<li><p><strong>Spring Boot Starters</strong>: Pre-configured libraries for common use cases (e.g., <code>spring-boot-starter-web</code> for web apps).</p></li>
+<li><p><strong>Embedded Servers</strong>: No need for external deployment; apps can run directly using an embedded server.</p></li>
+<li><p><strong>Spring Boot Actuator</strong>: Provides operational endpoints to monitor and manage the application.</p></li>
 </ul>
 
 <h2>3. <strong>Spring Web</strong></h2>
 
 <p>Spring Web is a key module in Spring Framework for creating web-based applications. It includes:
-- <strong>Spring MVC (Model-View-Controller)</strong>: Used to build RESTful web services and traditional web applications.
-  - <strong>Controllers</strong>: Define endpoints to handle HTTP requests.
-  - <strong>Request Mapping</strong>: Map HTTP requests to specific handler methods using annotations (<code>@GetMapping</code>, <code>@PostMapping</code>, etc.).
-  - <strong>View Resolution</strong>: Resolve logical view names to actual views (JSP, Thymeleaf, etc.).
-- <strong>REST Support</strong>: Spring provides extensive support for building RESTful services:
-  - <strong>@RestController</strong>: Combines <code>@Controller</code> and <code>@ResponseBody</code> to simplify the creation of REST APIs.
-  - <strong>Content Negotiation</strong>: Support for different response formats (JSON, XML, etc.).</p>
+- <strong>Spring MVC (Model-View-Controller)</strong>: Used to build RESTful web services and traditional web applications.</p>
+
+<ul>
+<li><p><strong>Controllers</strong>: Define endpoints to handle HTTP requests.</p></li>
+<li><p><strong>Request Mapping</strong>: Map HTTP requests to specific handler methods using annotations (<code>@GetMapping</code>, <code>@PostMapping</code>, etc.).</p></li>
+<li><p><strong>View Resolution</strong>: Resolve logical view names to actual views (JSP, Thymeleaf, etc.).</p></li>
+<li><p><strong>REST Support</strong>: Spring provides extensive support for building RESTful services:</p></li>
+<li><p><strong>@RestController</strong>: Combines <code>@Controller</code> and <code>@ResponseBody</code> to simplify the creation of REST APIs.</p></li>
+<li><p><strong>Content Negotiation</strong>: Support for different response formats (JSON, XML, etc.).</p></li>
+</ul>
 
 <h2>4. <strong>Spring Data</strong></h2>
 
-<p>Spring Data simplifies database access and abstracting away the complexities of data manipulation. It includes:
-- <strong>Spring Data JPA</strong>: Simplifies interaction with relational databases by abstracting the ORM layer.
-  - <strong>Repositories</strong>: Interface-based repositories (e.g., <code>CrudRepository</code>, <code>JpaRepository</code>) provide common data access methods.
-  - <strong>Custom Queries</strong>: Spring Data JPA allows you to define custom queries using annotations (<code>@Query</code>) or method names (<code>findByUsername</code>).
-- <strong>Spring Data MongoDB</strong>: Provides support for working with MongoDB in a similar fashion as JPA for relational databases.
-- <strong>Spring Data Redis</strong>: Supports Redis as a data store, allowing caching and session management.</p>
+<p>Spring Data simplifies database access and abstracting away the complexities of data manipulation. It includes:</p>
+
+<ul>
+<li><p><strong>Spring Data JPA</strong>: Simplifies interaction with relational databases by abstracting the ORM layer.</p></li>
+<li><p><strong>Repositories</strong>: Interface-based repositories (e.g., <code>CrudRepository</code>, <code>JpaRepository</code>) provide common data access methods.</p></li>
+<li><p><strong>Custom Queries</strong>: Spring Data JPA allows you to define custom queries using annotations (<code>@Query</code>) or method names (<code>findByUsername</code>).</p></li>
+<li><p><strong>Spring Data MongoDB</strong>: Provides support for working with MongoDB in a similar fashion as JPA for relational databases.</p></li>
+<li><p><strong>Spring Data Redis</strong>: Supports Redis as a data store, allowing caching and session management.</p></li>
+</ul>
 
 <h3>Key Features:</h3>
 
 <ul>
-<li><strong>Pagination and Sorting</strong>: Built-in support for paginated and sorted queries.</li>
-<li><strong>Auditing</strong>: Automatically track entity creation and modification times.</li>
+<li><p><strong>Pagination and Sorting</strong>: Built-in support for paginated and sorted queries.</p></li>
+<li><p><strong>Auditing</strong>: Automatically track entity creation and modification times.</p></li>
 </ul>
 
 <h2>5. <strong>Spring Cloud</strong></h2>
 
-<p>Spring Cloud provides tools for building distributed systems and microservices. It integrates seamlessly with the Spring ecosystem and offers solutions for common microservices challenges:
-- <strong>Service Discovery</strong>: Using tools like <strong>Eureka</strong>, services can discover each other dynamically at runtime.
-- <strong>Circuit Breakers</strong>: Using <strong>Hystrix</strong>, Spring Cloud enables fault tolerance by preventing cascading failures in microservices.
-- <strong>API Gateway</strong>: <strong>Spring Cloud Gateway</strong> is used to route API requests and manage authentication, rate limiting, and more.
-- <strong>Distributed Configuration</strong>: <strong>Spring Cloud Config</strong> provides centralized configuration management across multiple environments.
-- <strong>Service Tracing</strong>: Tools like <strong>Spring Cloud Sleuth</strong> and <strong>Zipkin</strong> enable distributed tracing of requests in a microservice architecture.</p>
+<p>Spring Cloud provides tools for building distributed systems and microservices. It integrates seamlessly with the Spring ecosystem and offers solutions for common microservices challenges:</p>
+
+<ul>
+<li><p><strong>Service Discovery</strong>: Using tools like <strong>Eureka</strong>, services can discover each other dynamically at runtime.</p></li>
+<li><p><strong>Circuit Breakers</strong>: Using <strong>Hystrix</strong>, Spring Cloud enables fault tolerance by preventing cascading failures in microservices.</p></li>
+<li><p><strong>API Gateway</strong>: <strong>Spring Cloud Gateway</strong> is used to route API requests and manage authentication, rate limiting, and more.</p></li>
+<li><p><strong>Distributed Configuration</strong>: <strong>Spring Cloud Config</strong> provides centralized configuration management across multiple environments.</p></li>
+<li><p><strong>Service Tracing</strong>: Tools like <strong>Spring Cloud Sleuth</strong> and <strong>Zipkin</strong> enable distributed tracing of requests in a microservice architecture.</p></li>
+</ul>
 
 <h3>Common Components:</h3>
 
 <ul>
-<li><strong>Spring Cloud Netflix</strong>: Includes a suite of tools for building resilient, scalable microservices using Netflix OSS.</li>
-<li><strong>Spring Cloud Config</strong>: Provides centralized configuration with versioned properties stored in Git repositories.</li>
+<li><p><strong>Spring Cloud Netflix</strong>: Includes a suite of tools for building resilient, scalable microservices using Netflix OSS.</p></li>
+<li><p><strong>Spring Cloud Config</strong>: Provides centralized configuration with versioned properties stored in Git repositories.</p></li>
 </ul>
 
 <h2>6. <strong>Spring Security</strong></h2>
 
-<p>Spring Security is a powerful framework that provides authentication, authorization, and protection against common attacks (like CSRF, XSS) in Java applications. Key features include:
-- <strong>Authentication Providers</strong>: Supports a wide range of authentication methods (Basic, OAuth2, LDAP, JWT, etc.).
-- <strong>Authorization</strong>: Role-based access control using <code>@PreAuthorize</code>, <code>@Secured</code>, and other annotations.
-- <strong>Method-Level Security</strong>: Define access control policies at method level using annotations.
-- <strong>CSRF Protection</strong>: Enabled by default to prevent cross-site request forgery attacks.
-- <strong>Password Management</strong>: Built-in support for password hashing and encoding using tools like BCrypt.</p>
+<p>Spring Security is a powerful framework that provides authentication, authorization, and protection against common attacks (like CSRF, XSS) in Java applications. Key features include:</p>
+
+<ul>
+<li><p><strong>Authentication Providers</strong>: Supports a wide range of authentication methods (Basic, OAuth2, LDAP, JWT, etc.).</p></li>
+<li><p><strong>Authorization</strong>: Role-based access control using <code>@PreAuthorize</code>, <code>@Secured</code>, and other annotations.</p></li>
+<li><p><strong>Method-Level Security</strong>: Define access control policies at method level using annotations.</p></li>
+<li><p><strong>CSRF Protection</strong>: Enabled by default to prevent cross-site request forgery attacks.</p></li>
+<li><p><strong>Password Management</strong>: Built-in support for password hashing and encoding using tools like BCrypt.</p></li>
+</ul>
 
 <h3>Key Concepts:</h3>
 
 <ul>
-<li><strong>Security Context</strong>: Holds authentication information for the current user, available globally in the application.</li>
-<li><strong>Filter Chain</strong>: A series of filters applied to every request for tasks like authentication, authorization, and logging.</li>
+<li><p><strong>Security Context</strong>: Holds authentication information for the current user, available globally in the application.</p></li>
+<li><p><strong>Filter Chain</strong>: A series of filters applied to every request for tasks like authentication, authorization, and logging.</p></li>
 </ul>
 
 <h2>7. <strong>Spring Batch</strong></h2>
@@ -155,28 +173,28 @@
 <h3>Key Components:</h3>
 
 <ul>
-<li><strong>Job</strong>: Represents the batch process, divided into multiple steps.</li>
-<li><strong>Step</strong>: A single phase in a job. A job can consist of multiple steps.</li>
-<li><strong>ItemReader</strong>: Responsible for reading data (e.g., from a file, database, or queue) in chunks.</li>
-<li><strong>ItemProcessor</strong>: Applies transformations or business logic on the read data.</li>
-<li><strong>ItemWriter</strong>: Writes the processed data to the destination (e.g., file, database, etc.).</li>
-<li><strong>JobRepository</strong>: Stores metadata about job executions, such as job status, start time, end time, etc.</li>
+<li><p><strong>Job</strong>: Represents the batch process, divided into multiple steps.</p></li>
+<li><p><strong>Step</strong>: A single phase in a job. A job can consist of multiple steps.</p></li>
+<li><p><strong>ItemReader</strong>: Responsible for reading data (e.g., from a file, database, or queue) in chunks.</p></li>
+<li><p><strong>ItemProcessor</strong>: Applies transformations or business logic on the read data.</p></li>
+<li><p><strong>ItemWriter</strong>: Writes the processed data to the destination (e.g., file, database, etc.).</p></li>
+<li><p><strong>JobRepository</strong>: Stores metadata about job executions, such as job status, start time, end time, etc.</p></li>
 </ul>
 
 <h3>Common Use Cases:</h3>
 
 <ul>
-<li><strong>ETL (Extract, Transform, Load)</strong>: Reading data from various sources, applying transformations, and writing it to a destination.</li>
-<li><strong>Data Migration</strong>: Moving data from legacy systems to newer databases.</li>
-<li><strong>Scheduled Jobs</strong>: Running periodic jobs (e.g., reports generation or data synchronization).</li>
+<li><p><strong>ETL (Extract, Transform, Load)</strong>: Reading data from various sources, applying transformations, and writing it to a destination.</p></li>
+<li><p><strong>Data Migration</strong>: Moving data from legacy systems to newer databases.</p></li>
+<li><p><strong>Scheduled Jobs</strong>: Running periodic jobs (e.g., reports generation or data synchronization).</p></li>
 </ul>
 
 <h3>Key Features:</h3>
 
 <ul>
-<li><strong>Chunk-oriented Processing</strong>: Spring Batch processes large datasets in chunks to ensure efficient memory usage.</li>
-<li><strong>Job Partitioning</strong>: Enables parallel processing by dividing the job into smaller partitions.</li>
-<li><strong>Job Restartability</strong>: Spring Batch allows resuming jobs from where they left off in case of failure.</li>
+<li><p><strong>Chunk-oriented Processing</strong>: Spring Batch processes large datasets in chunks to ensure efficient memory usage.</p></li>
+<li><p><strong>Job Partitioning</strong>: Enables parallel processing by dividing the job into smaller partitions.</p></li>
+<li><p><strong>Job Restartability</strong>: Spring Batch allows resuming jobs from where they left off in case of failure.</p></li>
 </ul>
 
 <h3>Example:</h3>
@@ -212,17 +230,18 @@ public Job job(JobBuilderFactory jobBuilderFactory, StepBuilderFactory stepBuild
 <h3>Key Concepts:</h3>
 
 <ul>
-<li><strong>Aspect</strong>: A module that encapsulates a cross-cutting concern (e.g., logging, security).</li>
-<li><strong>Join Point</strong>: A specific point in the program (such as a method execution) where an aspect can be applied.</li>
-<li><strong>Advice</strong>: The action taken by an aspect at a particular join point (e.g., before or after method execution).
+<li><p><strong>Aspect</strong>: A module that encapsulates a cross-cutting concern (e.g., logging, security).</p></li>
+<li><p><strong>Join Point</strong>: A specific point in the program (such as a method execution) where an aspect can be applied.</p></li>
+<li><p><strong>Advice</strong>: The action taken by an aspect at a particular join point (e.g., before or after method execution).</p>
+
 <ul>
-<li><strong>Before Advice</strong>: Runs before the join point (method execution).</li>
-<li><strong>After Returning Advice</strong>: Runs after the method successfully completes.</li>
-<li><strong>After Throwing Advice</strong>: Runs if the method throws an exception.</li>
-<li><strong>Around Advice</strong>: Wraps around a join point, providing the ability to control method execution.</li>
+<li><p><strong>Before Advice</strong>: Runs before the join point (method execution).</p></li>
+<li><p><strong>After Returning Advice</strong>: Runs after the method successfully completes.</p></li>
+<li><p><strong>After Throwing Advice</strong>: Runs if the method throws an exception.</p></li>
+<li><p><strong>Around Advice</strong>: Wraps around a join point, providing the ability to control method execution.</p></li>
 </ul></li>
-<li><strong>Pointcut</strong>: A predicate that matches join points. It defines where advice should be applied.</li>
-<li><strong>Weaving</strong>: The process of applying aspects to target objects, creating proxy objects.</li>
+<li><p><strong>Pointcut</strong>: A predicate that matches join points. It defines where advice should be applied.</p></li>
+<li><p><strong>Weaving</strong>: The process of applying aspects to target objects, creating proxy objects.</p></li>
 </ul>
 
 <h3>Example:</h3>
@@ -252,17 +271,17 @@ public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 <h3>Key Features:</h3>
 
 <ul>
-<li>Modularity: AOP allows you to keep cross-cutting concerns separated from business logic.</li>
-<li>Decoupling: Business logic is not cluttered with concerns like logging or security.</li>
-<li>Reusability: Aspects are reusable across multiple application layers (services, repositories, etc.).</li>
+<li><p>Modularity: AOP allows you to keep cross-cutting concerns separated from business logic.</p></li>
+<li><p>Decoupling: Business logic is not cluttered with concerns like logging or security.</p></li>
+<li><p>Reusability: Aspects are reusable across multiple application layers (services, repositories, etc.).</p></li>
 </ul>
 
 <h3>Common Use Cases:</h3>
 
 <ul>
-<li>Logging: Automatically log method entry/exit without modifying the core business logic.</li>
-<li>Transaction Management: Apply transactional behavior declaratively without explicit transaction management code.</li>
-<li>Security: Enforce security policies on method execution.</li>
+<li><p>Logging: Automatically log method entry/exit without modifying the core business logic.</p></li>
+<li><p>Transaction Management: Apply transactional behavior declaratively without explicit transaction management code.</p></li>
+<li><p>Security: Enforce security policies on method execution.</p></li>
 </ul>
 
 <h2>9. <strong>Common Interview Questions on Spring Framework</strong></h2>
@@ -274,18 +293,18 @@ public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 <h3>2. <strong>Explain the different types of Spring Bean Scopes.</strong></h3>
 
 <ul>
-<li><strong>Singleton</strong>: Only one instance of the bean is created (default scope).</li>
-<li><strong>Prototype</strong>: A new instance is created each time the bean is requested.</li>
-<li><strong>Request</strong>: A new instance is created for each HTTP request (only for web applications).</li>
-<li><strong>Session</strong>: A new instance is created for each HTTP session.</li>
+<li><p><strong>Singleton</strong>: Only one instance of the bean is created (default scope).</p></li>
+<li><p><strong>Prototype</strong>: A new instance is created each time the bean is requested.</p></li>
+<li><p><strong>Request</strong>: A new instance is created for each HTTP request (only for web applications).</p></li>
+<li><p><strong>Session</strong>: A new instance is created for each HTTP session.</p></li>
 </ul>
 
 <h3>3. <strong>What is the difference between <code>@Component</code>, <code>@Service</code>, and <code>@Repository</code> annotations?</strong></h3>
 
 <ul>
-<li><strong>@Component</strong>: A generic stereotype for any Spring-managed component.</li>
-<li><strong>@Service</strong>: Indicates that the class holds business logic. It's a specialized form of <code>@Component</code>.</li>
-<li><strong>@Repository</strong>: Used for DAO (Data Access Object) components and automatically translates database-related exceptions.</li>
+<li><p><strong>@Component</strong>: A generic stereotype for any Spring-managed component.</p></li>
+<li><p><strong>@Service</strong>: Indicates that the class holds business logic. It's a specialized form of <code>@Component</code>.</p></li>
+<li><p><strong>@Repository</strong>: Used for DAO (Data Access Object) components and automatically translates database-related exceptions.</p></li>
 </ul>
 
 <h3>4. <strong>What are Spring Boot Starters?</strong></h3>
